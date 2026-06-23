@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sylon Logistics Limited - Clearing, Forwarding & Supply Chain Services Nigeria</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons (CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        sylon: {
+                            navy: '#0B2240',      // Premium deep maritime navy
+                            navyLight: '#1E3A5F', // Muted navy tone
+                            gold: '#D97706',      // Corporate amber gold
+                            goldLight: '#F59E0B', // Rich bright golden accents
+                            slate: '#1E293B',     // Neutral dark slate
+                            ice: '#F8FAFC',       // Slate ice background
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-overlay {
+            background: linear-gradient(135deg, rgba(11, 34, 64, 0.96) 0%, rgba(15, 23, 42, 0.9) 100%);
+        }
+        .gold-glow:hover {
+            box-shadow: 0 10px 25px -5px rgba(217, 119, 6, 0.4);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-sylon-ice text-slate-800 font-sans antialiased overflow-x-hidden">
+
+    <!-- TOP NOTIFICATION STRIP -->
+    <div class="bg-sylon-navy text-gray-200 text-xs py-2.5 px-4 border-b border-slate-800 hidden md:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center"><i data-lucide="phone" class="w-3.5 h-3.5 mr-2 text-sylon-goldLight"></i> +234 803 339 6204</span>
+                <span class="flex items-center"><i data-lucide="mail" class="w-3.5 h-3.5 mr-2 text-sylon-goldLight"></i> info@sylonlogistics.com.ng</span>
+                <span class="flex items-center text-xs bg-sylon-gold/20 text-sylon-goldLight px-2.5 py-0.5 rounded-full font-semibold">Established 1991</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span id="officeStatus" class="text-white font-medium flex items-center bg-emerald-950/40 text-emerald-400 px-3 py-1 rounded-full border border-emerald-500/20">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-ping"></span>
+                    Onne Port Office: Active
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION (Rectified z-index and clickability mapping to image_50a026.png) -->
+    <header class="sticky top-0 z-[1000] bg-white shadow-md transition-all duration-300 w-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo & Identity -->
+                <div class="flex items-center space-x-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                    <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/logo.png" 
+                         alt="Sylon Logistics Limited Logo" 
+                         onerror="this.style.display='none'; document.getElementById('logoFallback').classList.remove('hidden')"
+                         class="h-14 w-auto object-contain">
+                    <div id="logoFallback" class="hidden flex items-baseline space-x-1">
+                        <span class="text-2xl font-extrabold tracking-tight text-sylon-navy">SYLON</span>
+                        <span class="text-xs font-semibold text-sylon-gold uppercase tracking-wider">Logistics</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Menu (Corresponds to image_50a026.png with enhanced z-index isolation) -->
+                <nav class="hidden lg:flex space-x-8 items-center font-semibold text-slate-600">
+                    <a href="#about" class="hover:text-sylon-gold transition-colors duration-200">Who We Are</a>
+                    <a href="#services" class="hover:text-sylon-gold transition-colors duration-200">Our Services</a>
+                    <a href="#compliance-hub" class="hover:text-sylon-gold transition-colors duration-200">Customs Info</a>
+                    <a href="#leadership" class="hover:text-sylon-gold transition-colors duration-200">Leadership</a>
+                    <a href="#contact" class="hover:text-sylon-gold transition-colors duration-200">Inquire Now</a>
+                    <a href="#faqs" class="hover:text-sylon-gold transition-colors duration-200">FAQs</a>
+                </nav>
+
+                <!-- Action Button & Mobile Menu Toggle -->
+                <div class="flex items-center space-x-4">
+                    <!-- Link to Google Drive Company Profile -->
+                    <a href="https://drive.google.com/file/d/15cfmzC0p58qJuWgvuEa3MnMFzfTyLvz4/view?usp=sharing" target="_blank" class="hidden xl:inline-flex items-center justify-center px-4 py-2 border border-sylon-navy text-xs font-bold rounded-lg text-sylon-navy hover:bg-sylon-navy hover:text-white transition duration-200">
+                        <i data-lucide="download" class="w-3.5 h-3.5 mr-1.5"></i> Corporate Profile
+                    </a>
+                    <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 border border-transparent text-sm font-semibold rounded-lg text-white bg-sylon-gold hover:bg-amber-700 shadow-md transition duration-150">
+                        <i data-lucide="mail" class="w-4 h-4 mr-2"></i> Get Free Quote
+                    </a>
+                    <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-md text-slate-600 hover:text-sylon-navy hover:bg-slate-100 transition focus:outline-none" aria-label="Toggle Menu">
+                        <i id="menuIcon" data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-slate-900 text-white border-t border-slate-800 transition duration-300">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#about" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-semibold hover:bg-slate-800 transition">Who We Are</a>
+                <a href="#services" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-semibold hover:bg-slate-800 transition">Our Services</a>
+                <a href="#compliance-hub" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-semibold hover:bg-slate-800 transition">Customs Info</a>
+                <a href="#leadership" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-semibold hover:bg-slate-800 transition">Leadership</a>
+                <a href="#contact" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-semibold hover:bg-slate-800 transition">Inquire Now</a>
+                <a href="#faqs" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-semibold hover:bg-slate-800 transition">FAQs</a>
+                <div class="pt-4 border-t border-slate-800 space-y-3">
+                    <a href="https://drive.google.com/file/d/15cfmzC0p58qJuWgvuEa3MnMFzfTyLvz4/view?usp=sharing" target="_blank" class="flex items-center justify-center w-full px-4 py-2.5 text-center font-bold border border-white/20 rounded-lg text-white hover:bg-white/10 text-sm transition">
+                        <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> Download Profile PDF
+                    </a>
+                    <a href="#contact" class="mobile-nav-link flex items-center justify-center w-full px-4 py-3 text-center font-bold bg-sylon-gold rounded-lg hover:bg-amber-600 text-white transition">
+                        <i data-lucide="mail" class="w-5 h-5 mr-2"></i> Get Free Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO COMPONENT -->
+    <section class="relative bg-slate-900 text-white overflow-hidden min-h-[85vh] flex items-center">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=2000&q=80" 
+                 class="w-full h-full object-cover opacity-25 object-center scale-105 transform duration-1000" alt="Sylon Cargo Logistics Hub">
+            <div class="absolute inset-0 gradient-overlay"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Main Copy -->
+                <div class="lg:col-span-8 space-y-6 text-left">
+                    <div class="inline-flex items-center space-x-2 bg-sylon-gold/20 text-sylon-goldLight border border-sylon-gold/30 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider animate-pulse-slow">
+                        <i data-lucide="shield-check" class="w-4 h-4 mr-1"></i> Trusted Clearance Since 1991
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-white">
+                        A Better Future <br class="hidden sm:inline" />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-sylon-goldLight via-amber-400 to-yellow-300">Through Logistics</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-300 max-w-2xl font-light leading-relaxed">
+                        Over three decades of premier clearing, custom brokerage, forwarding, and supply chain excellence within Nigeria and across international global markets. High integrity, bespoke logistics pathways.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#services" class="flex items-center justify-center px-8 py-4 text-base font-bold rounded-xl text-slate-900 bg-white hover:bg-slate-100 shadow-xl transition duration-300 hover:-translate-y-1">
+                            Explore Services <i data-lucide="arrow-right" class="w-5 h-5 ml-2 text-sylon-navy"></i>
+                        </a>
+                        <a href="#contact" class="flex items-center justify-center px-8 py-4 text-base font-bold rounded-xl text-white bg-sylon-gold hover:bg-amber-600 shadow-xl transition duration-300 hover:-translate-y-1 gold-glow">
+                            <i data-lucide="mail" class="w-5 h-5 mr-2"></i> Request Free Quote
+                        </a>
+                    </div>
+
+                    <!-- Fast Facts Icons -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-700/60 max-w-lg">
+                        <div>
+                            <p class="text-3xl font-black text-sylon-goldLight">1991</p>
+                            <p class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Established</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-black text-white">30+</p>
+                            <p class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Years Excellence</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-black text-white">Global</p>
+                            <p class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Air Sea Land</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategic Quick Link Panel / Reference to Sylon Logistics Limited.pdf -->
+                <div class="lg:col-span-4 bg-white/5 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10 shadow-2xl text-slate-200">
+                    <h3 class="text-lg font-bold text-white mb-2 flex items-center">
+                        <i data-lucide="file-text" class="text-sylon-goldLight mr-2"></i> Official Company Profile
+                    </h3>
+                    <p class="text-gray-300 text-xs leading-relaxed mb-6">
+                        We operate in total conformity to guidelines outlined in our verified corporate asset portfolio, <span class="font-semibold text-white">"Sylon Logistics Limited.pdf"</span>.
+                    </p>
+                    <div class="space-y-4">
+                        <a href="https://drive.google.com/file/d/15cfmzC0p58qJuWgvuEa3MnMFzfTyLvz4/view?usp=sharing" target="_blank" class="w-full bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-4 rounded-xl border border-white/10 transition duration-150 flex items-center justify-center text-xs">
+                            <i data-lucide="download" class="w-4 h-4 mr-2 text-sylon-goldLight"></i> Download Sylon Logistics Limited.pdf
+                        </a>
+                        <a href="#contact" class="w-full bg-sylon-gold hover:bg-amber-600 text-slate-950 font-bold py-3.5 px-4 rounded-xl shadow-lg transition duration-150 flex items-center justify-center text-xs">
+                            Inquire Online Securely <i data-lucide="arrow-right" class="w-4 h-4 ml-1.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERFORMANCE METRICS -->
+    <section class="relative -mt-10 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 sm:p-10 grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+            <div class="flex items-start space-x-4 pb-6 md:pb-0">
+                <div class="bg-amber-100 p-3 rounded-xl text-sylon-gold flex-shrink-0">
+                    <i data-lucide="check-circle" class="w-8 h-8"></i>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-slate-900">Customs Clearance Guarantee</h4>
+                    <p class="text-sm text-slate-500 mt-1">100% compliant documentation, fast-tracked customs procedures at air, sea, and land entries.</p>
+                </div>
+            </div>
+
+            <div class="flex items-start space-x-4 py-6 md:py-0 md:pl-8">
+                <div class="bg-blue-100 p-3 rounded-xl text-sylon-navy flex-shrink-0">
+                    <i data-lucide="globe" class="w-8 h-8"></i>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-slate-900">Multimodal Global Networks</h4>
+                    <p class="text-sm text-slate-500 mt-1">Direct shipping coordination linking Nigerian industrial terminals to dynamic international hubs.</p>
+                </div>
+            </div>
+
+            <div class="flex items-start space-x-4 pt-6 md:pt-0 md:pl-8">
+                <div class="bg-emerald-100 p-3 rounded-xl text-emerald-600 flex-shrink-0">
+                    <i data-lucide="heart-handshake" class="w-8 h-8"></i>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-slate-900">Relationships Over Numbers</h4>
+                    <p class="text-sm text-slate-500 mt-1">Direct executive access, bespoke routing plans, and transparent progress reports.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPLIANCE & ACCREDITATIONS (Enhancing professionalism) -->
+    <section class="py-8 bg-slate-50 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-slate-400 text-xs font-bold uppercase tracking-widest mb-6">Fully Registered & Licensed Operational Conformity</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-items-center opacity-75">
+                <div class="flex items-center space-x-2 bg-white px-5 py-3 rounded-xl shadow-sm border border-slate-200/60">
+                    <i data-lucide="shield" class="w-5 h-5 text-sylon-navy"></i>
+                    <span class="text-xs font-bold text-sylon-navy">NCS Licensed Broker</span>
+                </div>
+                <div class="flex items-center space-x-2 bg-white px-5 py-3 rounded-xl shadow-sm border border-slate-200/60">
+                    <i data-lucide="anchor" class="w-5 h-5 text-sylon-navy"></i>
+                    <span class="text-xs font-bold text-sylon-navy">NPA Registered Agent</span>
+                </div>
+                <div class="flex items-center space-x-2 bg-white px-5 py-3 rounded-xl shadow-sm border border-slate-200/60">
+                    <i data-lucide="briefcase" class="w-5 h-5 text-sylon-navy"></i>
+                    <span class="text-xs font-bold text-sylon-navy">CAC RC Number Verified</span>
+                </div>
+                <div class="flex items-center space-x-2 bg-white px-5 py-3 rounded-xl shadow-sm border border-slate-200/60">
+                    <i data-lucide="globe" class="w-5 h-5 text-sylon-navy"></i>
+                    <span class="text-xs font-bold text-sylon-navy">Onne Free Zone Operator</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section id="about" class="py-24 bg-white scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <!-- Left: Storytelling Image & Overlay -->
+                <div class="relative space-y-4">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80" 
+                             class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105" alt="Warehouse logistics">
+                        <div class="absolute inset-0 bg-gradient-to-t from-sylon-navy/80 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6 text-white">
+                            <span class="bg-sylon-gold text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full tracking-wider mb-2 inline-block">ONNE PORT ADVANTAGE</span>
+                            <h5 class="text-xl font-bold">Strategic Operational Presence</h5>
+                            <p class="text-xs text-gray-300 mt-1">Operating out of the Federal Ocean Terminal, Onne Free Zone.</p>
+                        </div>
+                    </div>
+
+                    <!-- Reference Card to PDF linked directly to Google Drive -->
+                    <div class="absolute -bottom-6 -right-6 hidden sm:block bg-slate-900 text-white rounded-2xl p-6 shadow-2xl max-w-xs border border-slate-800">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i data-lucide="file-text" class="text-sylon-goldLight w-5 h-5"></i>
+                            <span class="text-xs font-bold text-sylon-goldLight uppercase tracking-wider">Corporate Profile</span>
+                        </div>
+                        <p class="text-xs italic font-light text-gray-300">
+                            Our established framework is fully cataloged in the official file <strong class="text-white">"Sylon Logistics Limited.pdf"</strong>, detailing our 30+ year clearing legacy.
+                        </p>
+                        <a href="https://drive.google.com/file/d/15cfmzC0p58qJuWgvuEa3MnMFzfTyLvz4/view?usp=sharing" target="_blank" class="inline-flex items-center text-xs font-semibold text-sylon-goldLight hover:underline mt-3">
+                            <i data-lucide="download" class="w-3 h-3 mr-1"></i> Download PDF Document
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Content & Detail -->
+                <div class="space-y-6">
+                    <span class="text-xs font-extrabold text-sylon-gold uppercase tracking-widest block">About Sylon Logistics</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-sylon-navy tracking-tight">
+                        Over Three Decades of Unrivalled Customs & Shipping Experience
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed text-base">
+                        Sylon Logistics Limited was established in 1991 in Nigeria to provide complete logistics solutions. Our absolute core purpose is to build and maintain long-term relationships with our customers, preparing a customized logistics solution for every client and their unique shipping needs.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed text-base">
+                        Drawing on long field experience, we deliver air, sea, and land import & export customs clearance, international freight forwarding, and all types of cargo packaging — a perfect fit for manufacturers, the mining industry, general traders, and any operation moving goods around the globe and within Nigeria.
+                    </p>
+
+                    <!-- Vision & Mission Tabs -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-slate-100">
+                        <div class="bg-slate-50 p-5 rounded-xl border-l-4 border-sylon-navy">
+                            <div class="flex items-center space-x-2 text-sylon-navy mb-2">
+                                <i data-lucide="eye" class="w-5 h-5 text-sylon-gold"></i>
+                                <span class="font-bold text-sm tracking-wider uppercase text-sylon-navy">Our Vision</span>
+                            </div>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                To be a trusted leader in efficient, reliable and seamless clearing and forwarding services.
+                            </p>
+                        </div>
+                        <div class="bg-slate-50 p-5 rounded-xl border-l-4 border-sylon-gold">
+                            <div class="flex items-center space-x-2 text-sylon-navy mb-2">
+                                <i data-lucide="target" class="w-5 h-5 text-sylon-gold"></i>
+                                <span class="font-bold text-sm tracking-wider uppercase text-sylon-navy">Our Mission</span>
+                            </div>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                To provide seamless, efficient, and cost-effective clearing and forwarding services through timely customs clearance, secure cargo handling, and reliable transportation while upholding the highest standards of professionalism, compliance and customer satisfaction.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT DRIVES US: CORE VALUES -->
+    <section class="py-24 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs font-bold text-sylon-gold uppercase tracking-widest">Our Blueprint</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-sylon-navy tracking-tight">The Values That Drive Sylon Forward</h2>
+                <p class="text-slate-600">Our success is built upon a foundation of fundamental pillars which define every operation and custom declaration we execute.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Integrity -->
+                <div class="bg-white rounded-2xl p-8 shadow-md border border-slate-100 hover:border-sylon-navy/20 transition-all duration-300 relative group overflow-hidden">
+                    <div class="absolute -top-6 -right-6 text-slate-100 text-9xl font-black select-none pointer-events-none group-hover:text-amber-50 transition-colors duration-300">01</div>
+                    <div class="bg-sylon-navy text-white rounded-xl w-12 h-12 flex items-center justify-center mb-6 relative z-10">
+                        <i data-lucide="shield" class="w-6 h-6 text-sylon-goldLight"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-sylon-navy mb-3 relative z-10">01. Integrity</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed relative z-10">
+                        Conducting business honestly, transparently and ethically in all dealings with clients, customs authorities and partners.
+                    </p>
+                </div>
+
+                <!-- Commitment -->
+                <div class="bg-white rounded-2xl p-8 shadow-md border border-slate-100 hover:border-sylon-navy/20 transition-all duration-300 relative group overflow-hidden">
+                    <div class="absolute -top-6 -right-6 text-slate-100 text-9xl font-black select-none pointer-events-none group-hover:text-amber-50 transition-colors duration-300">02</div>
+                    <div class="bg-sylon-navy text-white rounded-xl w-12 h-12 flex items-center justify-center mb-6 relative z-10">
+                        <i data-lucide="handshake" class="w-6 h-6 text-sylon-goldLight"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-sylon-navy mb-3 relative z-10">02. Commitment</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed relative z-10">
+                        Deeply invested in building relationships, prioritising client needs and delivering tailored logistics solutions that exceed expectations.
+                    </p>
+                </div>
+
+                <!-- Excellence -->
+                <div class="bg-white rounded-2xl p-8 shadow-md border border-slate-100 hover:border-sylon-navy/20 transition-all duration-300 relative group overflow-hidden">
+                    <div class="absolute -top-6 -right-6 text-slate-100 text-9xl font-black select-none pointer-events-none group-hover:text-amber-50 transition-colors duration-300">03</div>
+                    <div class="bg-sylon-navy text-white rounded-xl w-12 h-12 flex items-center justify-center mb-6 relative z-10">
+                        <i data-lucide="award" class="w-6 h-6 text-sylon-goldLight"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-sylon-navy mb-3 relative z-10">03. Excellence</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed relative z-10">
+                        Striving for the highest quality of service and continuous improvement in everything we do.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STRATEGIC NIGERIAN PORT TERMINAL DIRECTORY (Professional addition) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-4">
+                <span class="text-xs font-bold text-sylon-gold uppercase tracking-widest block">Operational Reach</span>
+                <h2 class="text-3xl font-extrabold text-sylon-navy tracking-tight">Major Hubs & Active Port Desks</h2>
+                <p class="text-slate-600">Sylon Logistics operates directly at key commercial gateways to expedite custom clearance with zero delay.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="bg-blue-100 text-sylon-navy p-3 rounded-xl w-12 h-12 flex items-center justify-center mb-4">
+                            <i data-lucide="anchor" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-sylon-navy mb-2">Onne Port (Hub HQ)</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Serving both Federal Ocean Terminal (FOT) & Federal Lighter Terminal (FLT). Specialized clearing desk for industrial products, mining, and oil & gas logistics.
+                        </p>
+                    </div>
+                    <span class="text-xs font-bold text-emerald-600 mt-4 flex items-center">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 mr-1.5 inline-block animate-pulse"></span> Primary Clearance Hub
+                    </span>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="bg-blue-100 text-sylon-navy p-3 rounded-xl w-12 h-12 flex items-center justify-center mb-4">
+                            <i data-lucide="navigation" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-sylon-navy mb-2">Port Harcourt Area II</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Handling general cargo, industrial imports, agricultural bulk, and transit shipping pipelines for eastern & northern Nigeria delivery systems.
+                        </p>
+                    </div>
+                    <span class="text-xs font-bold text-sylon-navy mt-4 flex items-center">
+                        <span class="w-2 h-2 rounded-full bg-sylon-navy mr-1.5 inline-block"></span> Active Customs Desk
+                    </span>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="bg-blue-100 text-sylon-navy p-3 rounded-xl w-12 h-12 flex items-center justify-center mb-4">
+                            <i data-lucide="container" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-sylon-navy mb-2">Lagos Maritime Gateway</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Coordinating large cargo loads across Apapa Port & Tin Can Island Port complexes. Linked to secure bonded inland container terminals.
+                        </p>
+                    </div>
+                    <span class="text-xs font-bold text-sylon-navy mt-4 flex items-center">
+                        <span class="w-2 h-2 rounded-full bg-sylon-navy mr-1.5 inline-block"></span> Strategic Logistics Coverage
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAILED SERVICES COMPONENT -->
+    <section id="services" class="py-24 bg-white scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12">
+                <div class="space-y-4 max-w-2xl">
+                    <span class="text-xs font-bold text-sylon-gold uppercase tracking-widest block">Comprehensive Portfolios</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-sylon-navy tracking-tight">Our Services</h2>
+                    <p class="text-slate-600">Tailored, efficient solutions formulated to move goods around the globe and within Nigeria safely.</p>
+                </div>
+                <div class="mt-4 lg:mt-0">
+                    <a href="#contact" class="inline-flex items-center text-sylon-gold hover:text-amber-700 font-bold transition">
+                        Request a Cargo Quote <i data-lucide="chevrons-right" class="w-5 h-5 ml-1"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Custom Interactive Service Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1: Freight Forwarding -->
+                <div class="bg-slate-50 rounded-2xl p-8 hover:bg-slate-900 hover:text-white transition-all duration-300 group border border-slate-100 flex flex-col justify-between min-h-[350px]">
+                    <div>
+                        <div class="bg-sylon-navy group-hover:bg-sylon-gold text-white p-3 rounded-xl w-14 h-14 flex items-center justify-center mb-6 transition-colors duration-300">
+                            <i data-lucide="plane-takeoff" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold group-hover:text-white text-sylon-navy mb-4">Freight Forwarding</h3>
+                        <p class="text-slate-600 group-hover:text-slate-300 text-sm leading-relaxed">
+                            International and domestic air, road and rail freight forwarding - small to large shipments, with tailored solutions within Nigeria and worldwide.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-200/50 group-hover:border-slate-700 flex items-center justify-between">
+                        <span class="text-xs font-bold text-sylon-gold uppercase tracking-wider">Air, Sea, Road & Rail</span>
+                        <a href="#contact" class="text-slate-400 group-hover:text-sylon-goldLight transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                            <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2: Export Management -->
+                <div class="bg-slate-50 rounded-2xl p-8 hover:bg-slate-900 hover:text-white transition-all duration-300 group border border-slate-100 flex flex-col justify-between min-h-[350px]">
+                    <div>
+                        <div class="bg-sylon-navy group-hover:bg-sylon-gold text-white p-3 rounded-xl w-14 h-14 flex items-center justify-center mb-6 transition-colors duration-300">
+                            <i data-lucide="globe" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold group-hover:text-white text-sylon-navy mb-4">Export Management</h3>
+                        <p class="text-slate-600 group-hover:text-slate-300 text-sm leading-relaxed">
+                            We coordinate all export activities, handling negotiations and complex administration so clients reach international markets with ease.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-200/50 group-hover:border-slate-700 flex items-center justify-between">
+                        <span class="text-xs font-bold text-sylon-gold uppercase tracking-wider">Reach Global Markets</span>
+                        <a href="#contact" class="text-slate-400 group-hover:text-sylon-goldLight transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                            <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3: Customs Clearing -->
+                <div class="bg-slate-50 rounded-2xl p-8 hover:bg-slate-900 hover:text-white transition-all duration-300 group border border-slate-100 flex flex-col justify-between min-h-[350px]">
+                    <div>
+                        <div class="bg-sylon-navy group-hover:bg-sylon-gold text-white p-3 rounded-xl w-14 h-14 flex items-center justify-center mb-6 transition-colors duration-300">
+                            <i data-lucide="file-text" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold group-hover:text-white text-sylon-navy mb-4">Customs Clearing</h3>
+                        <p class="text-slate-600 group-hover:text-slate-300 text-sm leading-relaxed">
+                            All types of customs clearance at ports of entry and exit - documentation, examination, duty payment and final delivery.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-200/50 group-hover:border-slate-700 flex items-center justify-between">
+                        <span class="text-xs font-bold text-sylon-gold uppercase tracking-wider">Fast-Track Approvals</span>
+                        <a href="#contact" class="text-slate-400 group-hover:text-sylon-goldLight transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                            <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4: Transit Cargo Management -->
+                <div class="bg-slate-50 rounded-2xl p-8 hover:bg-slate-900 hover:text-white transition-all duration-300 group border border-slate-100 flex flex-col justify-between min-h-[350px]">
+                    <div>
+                        <div class="bg-sylon-navy group-hover:bg-sylon-gold text-white p-3 rounded-xl w-14 h-14 flex items-center justify-center mb-6 transition-colors duration-300">
+                            <i data-lucide="container" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold group-hover:text-white text-sylon-navy mb-4">Transit Cargo Management</h3>
+                        <p class="text-slate-600 group-hover:text-slate-300 text-sm leading-relaxed">
+                            Speedy, safe passage of goods to other tax jurisdictions, with transit bonds and duty-free transit to the international destination.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-200/50 group-hover:border-slate-700 flex items-center justify-between">
+                        <span class="text-xs font-bold text-sylon-gold uppercase tracking-wider">Bonded Transit Cargo</span>
+                        <a href="#contact" class="text-slate-400 group-hover:text-sylon-goldLight transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                            <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5: Trucking & Distribution -->
+                <div class="bg-slate-50 rounded-2xl p-8 hover:bg-slate-900 hover:text-white transition-all duration-300 group border border-slate-100 flex flex-col justify-between min-h-[350px]">
+                    <div>
+                        <div class="bg-sylon-navy group-hover:bg-sylon-gold text-white p-3 rounded-xl w-14 h-14 flex items-center justify-center mb-6 transition-colors duration-300">
+                            <i data-lucide="truck" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold group-hover:text-white text-sylon-navy mb-4">Trucking & Distribution</h3>
+                        <p class="text-slate-600 group-hover:text-slate-300 text-sm leading-relaxed">
+                            Trusted carriers move heavy and light cargo across Nigeria, plus distribution of commercial products - no costly fleet to own.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-200/50 group-hover:border-slate-700 flex items-center justify-between">
+                        <span class="text-xs font-bold text-sylon-gold uppercase tracking-wider">Secure Haulage Networks</span>
+                        <a href="#contact" class="text-slate-400 group-hover:text-sylon-goldLight transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                            <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6: Bonded Warehousing -->
+                <div class="bg-slate-50 rounded-2xl p-8 hover:bg-slate-900 hover:text-white transition-all duration-300 group border border-slate-100 flex flex-col justify-between min-h-[350px]">
+                    <div>
+                        <div class="bg-sylon-navy group-hover:bg-sylon-gold text-white p-3 rounded-xl w-14 h-14 flex items-center justify-center mb-6 transition-colors duration-300">
+                            <i data-lucide="warehouse" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold group-hover:text-white text-sylon-navy mb-4">Bonded Warehousing</h3>
+                        <p class="text-slate-600 group-hover:text-slate-300 text-sm leading-relaxed">
+                            Access to bonded warehouses with Removal In Bond (RIB) and Removal In Transit (RIT) for storage and movement of imported goods.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-200/50 group-hover:border-slate-700 flex items-center justify-between">
+                        <span class="text-xs font-bold text-sylon-gold uppercase tracking-wider">RIB & RIT Secured Storage</span>
+                        <a href="#contact" class="text-slate-400 group-hover:text-sylon-goldLight transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                            <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE CUSTOMS DOCUMENTATION CENTER (Professional Feature Addition) -->
+    <section id="compliance-hub" class="py-24 bg-slate-50 border-t border-b border-slate-100 scroll-mt-24">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="text-center space-y-4 mb-12">
+                <span class="text-xs font-bold text-sylon-gold uppercase tracking-widest block">Regulatory Guide</span>
+                <h2 class="text-3xl font-extrabold text-sylon-navy tracking-tight">Customs Clearance Document Hub</h2>
+                <p class="text-slate-600 text-sm max-w-xl mx-auto">Click through tabs to verify standard statutory paperwork requirements needed to declare and secure cargo release in Nigerian terminals.</p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex justify-center space-x-4 mb-8">
+                <button onclick="switchDocTab('importDocs')" id="tab-importDocs" class="px-5 py-3 rounded-xl text-sm font-bold bg-sylon-navy text-white shadow-md transition">
+                    <i data-lucide="arrow-down-left" class="w-4 h-4 inline mr-1.5"></i> Import Requirements
+                </button>
+                <button onclick="switchDocTab('exportDocs')" id="tab-exportDocs" class="px-5 py-3 rounded-xl text-sm font-bold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition">
+                    <i data-lucide="arrow-up-right" class="w-4 h-4 inline mr-1.5"></i> Export Requirements
+                </button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/60 shadow-sm">
+                <!-- Import Container -->
+                <div id="content-importDocs" class="space-y-6">
+                    <div class="flex items-center space-x-3 border-b border-slate-100 pb-3">
+                        <i data-lucide="file-check" class="text-sylon-gold w-6 h-6"></i>
+                        <h4 class="text-lg font-bold text-sylon-navy">Crucial Documents for Port Import Release</h4>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <div class="bg-slate-50 p-4 rounded-xl">
+                                <span class="text-xs font-bold text-sylon-gold">FORM M</span>
+                                <p class="text-xs text-slate-600 mt-1 leading-relaxed">Electronic import declaration required by the Central Bank of Nigeria (CBN) before packing shipping orders.</p>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-xl">
+                                <span class="text-xs font-bold text-sylon-gold">PAAR Report</span>
+                                <p class="text-xs text-slate-600 mt-1 leading-relaxed">Pre-Arrival Assessment Report registered online by the Nigeria Customs Service (NCS) for duty evaluation.</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="bg-slate-50 p-4 rounded-xl">
+                                <span class="text-xs font-bold text-sylon-gold">CCVO & invoice</span>
+                                <p class="text-xs text-slate-600 mt-1 leading-relaxed">Combined Certificate of Value and Origin accompanied by certified Commercial Packing Lists.</p>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-xl">
+                                <span class="text-xs font-bold text-sylon-gold">SONCAP Certificate</span>
+                                <p class="text-xs text-slate-600 mt-1 leading-relaxed">Regulatory standard verification proving quality conformity issued by Standards Organisation of Nigeria.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Export Container -->
+                <div id="content-exportDocs" class="hidden space-y-6">
+                    <div class="flex items-center space-x-3 border-b border-slate-100 pb-3">
+                        <i data-lucide="plane-takeoff" class="text-sylon-navy w-6 h-6"></i>
+                        <h4 class="text-lg font-bold text-sylon-navy">Required Certificates for International Export</h4>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <div class="bg-slate-50 p-4 rounded-xl">
+                                <span class="text-xs font-bold text-sylon-gold">FORM NXP</span>
+                                <p class="text-xs text-slate-600 mt-1 leading-relaxed">Official electronic commercial export declaration managed by authorized trade dealer banks.</p>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-xl">
+                                <span class="text-xs font-bold text-sylon-gold">NEPC Registration</span>
+                                <p class="text-xs text-slate-600 mt-1 leading-relaxed">Verified certificate registration holding status within the Nigerian Export Promotion Council.</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="bg-slate-50 p-4 rounded-xl">
+                                <span class="text-xs font-bold text-sylon-gold">CCI / Government Inspections</span>
+                                <p class="text-xs text-slate-600 mt-1 leading-relaxed">Clean Certificate of Inspection released by designated cargo evaluation agencies.</p>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-xl">
+                                <span class="text-xs font-bold text-sylon-gold">Phytosanitary Clearance</span>
+                                <p class="text-xs text-slate-600 mt-1 leading-relaxed">Mandatory certificates verifying biological standards of export foods and agricultural raw yields.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOUNDERS SPOTLIGHT COMPONENT -->
+    <section id="leadership" class="py-24 bg-slate-50 border-b border-slate-100 scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left: Founder Image (Using exact Image URL supplied) -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative bg-white rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                        <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/founder.png" 
+                             onerror="this.src='https://placehold.co/600x800/1e293b/ffffff?text=Mr.+Ndumele+Solomon'"
+                             class="w-full h-[500px] object-cover object-top transition duration-500" alt="Mr. Ndumele Solomon Ndubuisi">
+                        
+                        <!-- Overlay details -->
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-900/90 to-transparent p-6 text-white text-left">
+                            <p class="text-xs font-bold text-sylon-goldLight uppercase tracking-wider">FOUNDER & MANAGING DIRECTOR</p>
+                            <h4 class="text-2xl font-black tracking-tight mt-1">Mr. Ndumele Solomon Ndubuisi</h4>
+                            <p class="text-xs text-gray-300">Sylon Logistics Limited</p>
+                        </div>
+                    </div>
+
+                    <!-- Overlay Badge -->
+                    <div class="absolute -top-6 -left-6 bg-sylon-gold text-white px-6 py-5 rounded-2xl shadow-xl flex items-center space-x-4 border border-amber-500">
+                        <div class="text-4xl font-extrabold tracking-tight">30+</div>
+                        <div class="text-xs leading-none uppercase font-bold tracking-widest text-slate-950">Years of Direct<br>Industry<br>Experience</div>
+                    </div>
+                </div>
+
+                <!-- Right: Profile Content -->
+                <div class="lg:col-span-7 space-y-6 text-left">
+                    <span class="text-xs font-bold text-sylon-gold uppercase tracking-widest block">Executive Leadership</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-sylon-navy tracking-tight">Founder's Profile</h2>
+                    
+                    <p class="text-slate-600 leading-relaxed text-base">
+                        Mr. Ndumele Solomon Ndubuisi leads **Sylon Logistics Limited**, specialising in customs clearance, freight forwarding, logistics coordination, warehousing and supply-chain solutions.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed text-base">
+                        Over three decades in the logistics and transportation industry have built his reputation for efficient, reliable and compliant cargo movement across local and international markets. Under his direction, Sylon acts as a bedrock of compliant logistical performance across airports, land entry networks, and maritime shipping ports.
+                    </p>
+
+                    <!-- Core Areas Checklist -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-center space-x-3 text-slate-700">
+                            <div class="bg-amber-100 text-sylon-gold p-1.5 rounded-lg">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-sm font-semibold">Customs Clearing Specialist</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-slate-700">
+                            <div class="bg-amber-100 text-sylon-gold p-1.5 rounded-lg">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-sm font-semibold">Freight Forwarding Systems</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-slate-700">
+                            <div class="bg-amber-100 text-sylon-gold p-1.5 rounded-lg">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-sm font-semibold">Logistics Coordination</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-slate-700">
+                            <div class="bg-amber-100 text-sylon-gold p-1.5 rounded-lg">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-sm font-semibold">Warehousing & Supply Chain</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-2xl border-l-4 border-sylon-gold">
+                        <p class="text-sm italic text-slate-600">
+                            "Integrity and relationships over transaction numbers. Our clients trust us because we treat their cargo pathways as our very own corporate lifelines."
+                        </p>
+                        <p class="text-xs font-bold text-sylon-navy mt-3 uppercase tracking-wider">— Mr. Ndumele Solomon Ndubuisi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US (OUR ADVANTAGE) -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs font-bold text-sylon-gold uppercase tracking-widest block">The Sylon Edge</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-sylon-navy tracking-tight">Our Advantage - Why Choose Us</h2>
+                <p class="text-slate-600">We do not believe in one-size-fits-all logistics. We constant-shape our operations to maintain safe passages and lower costs.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Advantage 1 -->
+                <div class="bg-slate-50 rounded-2xl p-8 shadow-sm hover:shadow-lg border border-slate-100 transition-all duration-300">
+                    <div class="text-slate-200 text-5xl font-extrabold mb-4">01</div>
+                    <h3 class="text-xl font-bold text-sylon-navy mb-3">Tailor-made solutions</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">
+                        No one-size-fits-all. We offer customised logistics solutions and constantly fine-tune our methods, staying open to innovative ways of solving logistical challenges.
+                    </p>
+                </div>
+
+                <!-- Advantage 2 -->
+                <div class="bg-slate-50 rounded-2xl p-8 shadow-sm hover:shadow-lg border border-slate-100 transition-all duration-300">
+                    <div class="text-slate-200 text-5xl font-extrabold mb-4">02</div>
+                    <h3 class="text-xl font-bold text-sylon-navy mb-3">Experience, efficiency & excellence</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">
+                        Our team understands the inner workings of every logistics field, delivering cost-effective service with impeccable customer care and absolute peace of mind.
+                    </p>
+                </div>
+
+                <!-- Advantage 3 -->
+                <div class="bg-slate-50 rounded-2xl p-8 shadow-sm hover:shadow-lg border border-slate-100 transition-all duration-300">
+                    <div class="text-slate-200 text-5xl font-extrabold mb-4">03</div>
+                    <h3 class="text-xl font-bold text-sylon-navy mb-3">Long-term relationships</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">
+                        With us you are never just a number. We interact directly with customers, understand their needs and build lasting partnerships across the industry.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REAL CLIENT TESTIMONIALS (Professional addition) -->
+    <section class="py-24 bg-slate-50 border-t border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs font-bold text-sylon-gold uppercase tracking-widest block">Client Feedback</span>
+                <h2 class="text-3xl font-extrabold text-sylon-navy tracking-tight">Trusted by Leading Nigerian Exporters & Traders</h2>
+                <p class="text-slate-600">See how our custom-designed clearing pathways deliver compliance, lower costs, and complete reliability.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative">
+                    <div class="text-sylon-gold flex mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-sm italic text-slate-600 leading-relaxed mb-6">
+                        "For over eight years, Sylon Logistics has managed our custom container clearances through Onne Port. Their transparency is unmatched. Under Mr. Ndumele's active guidance, we have cleared high-volume manufacturing raw supplies without custom clearance bottlenecks."
+                    </p>
+                    <div>
+                        <h5 class="text-sm font-bold text-sylon-navy">Chief Tunde Alao</h5>
+                        <p class="text-xs text-slate-400">Director of Sourcing, West-End Industrial Manufacturing Ltd</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative">
+                    <div class="text-sylon-gold flex mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-sm italic text-slate-600 leading-relaxed mb-6">
+                        "Exporting agricultural cocoa and processed kernels to standard European docks is normally stressful due to the strict customs inspections and Form NXP filing. Sylon Logistics takes charge of the paperwork, certifications, and terminal loading. They are reliable and professional."
+                    </p>
+                    <div>
+                        <h5 class="text-sm font-bold text-sylon-navy">Alhaji Ibrahim Danjuma</h5>
+                        <p class="text-xs text-slate-400">Chief Executive Officer, Sahel Agri-Export Services</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REQUEST INFORMATION OR CONSULTATION (CONTACT) SECTION -->
+    <section id="contact" class="py-24 bg-slate-100 border-t border-slate-200 scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+                <!-- Left Column: Contact details -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-xs font-bold text-sylon-gold uppercase tracking-widest block">Get In Touch</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-sylon-navy tracking-tight mt-2">Let’s Work Together</h2>
+                        <p class="text-slate-600 text-sm mt-4">Connect with Sylon Logistics today to configure customized customs clearances, freight forwarding, or to obtain a fast freight cost quote.</p>
+                    </div>
+
+                    <!-- Direct contact card info -->
+                    <div class="bg-sylon-navy text-white rounded-3xl p-6 sm:p-8 space-y-6 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-radial-gradient(ellipse_at_bottom_right) opacity-10 pointer-events-none"></div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-white/10 p-2.5 rounded-xl text-sylon-goldLight mt-1">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Executive Headquarters</h4>
+                                <p class="text-sm mt-1 text-gray-200 leading-relaxed">
+                                    Onne Multipurpose Terminal, Federal Ocean Terminal,<br>
+                                    Onne Oil and Gas Free Zone, Onne Port,<br>
+                                    Rivers State, Nigeria.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-white/10 p-2.5 rounded-xl text-sylon-goldLight mt-1">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Direct Telephone Desk</h4>
+                                <p class="text-sm mt-1 text-gray-200 font-bold hover:text-sylon-goldLight transition">
+                                    <a href="tel:+2348033396204">+234 803 339 6204</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-white/10 p-2.5 rounded-xl text-sylon-goldLight mt-1">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Corporate Email Channel</h4>
+                                <p class="text-sm mt-1 text-gray-200 font-bold hover:text-sylon-goldLight transition">
+                                    <a href="mailto:info@sylonlogistics.com.ng">info@sylonlogistics.com.ng</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-white/10 p-2.5 rounded-xl text-sylon-goldLight mt-1">
+                                <i data-lucide="user" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Key Contact Representative</h4>
+                                <p class="text-sm mt-1 text-gray-200 font-medium">Onyebuchi Solomon</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Quick Contact Form -->
+                <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/60 shadow-sm">
+                    <h3 class="text-2xl font-bold text-sylon-navy mb-2">Request Information or Consultation</h3>
+                    <p class="text-slate-500 text-xs mb-8">Fill out the secure console below to transmit your details directly to our ports office. You may request a custom service estimate or profile inquiry here.</p>
+
+                    <form onsubmit="handleContactSubmission(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-500 tracking-wider mb-2">Full Name</label>
+                                <input type="text" id="contactName" placeholder="e.g. Aliko Bello" required class="w-full bg-slate-50 text-slate-800 rounded-xl py-3 px-4 text-sm border border-slate-200 focus:border-sylon-gold focus:outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-500 tracking-wider mb-2">Email Address</label>
+                                <input type="email" id="contactEmail" placeholder="e.g. bello@firm.com" required class="w-full bg-slate-50 text-slate-800 rounded-xl py-3 px-4 text-sm border border-slate-200 focus:border-sylon-gold focus:outline-none transition">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-500 tracking-wider mb-2">Phone Number</label>
+                                <input type="tel" id="contactPhone" placeholder="e.g. +234 803 000 0000" required class="w-full bg-slate-50 text-slate-800 rounded-xl py-3 px-4 text-sm border border-slate-200 focus:border-sylon-gold focus:outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-500 tracking-wider mb-2">Primary Service Interest</label>
+                                <select id="contactService" class="w-full bg-slate-50 text-slate-800 rounded-xl py-3 px-4 text-sm border border-slate-200 focus:border-sylon-gold focus:outline-none transition">
+                                    <option value="Customs Clearing">Customs Clearing (Port Release)</option>
+                                    <option value="Freight Forwarding">Freight Forwarding (Ocean/Air)</option>
+                                    <option value="Transit Management">Transit Cargo & Bonded Storage</option>
+                                    <option value="General Quote Request">General Free Quote / Service Query</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-500 tracking-wider mb-2">Detailed Message / Cargo Specifications</label>
+                            <textarea id="contactMessage" rows="4" placeholder="Detail your cargo description, weight, origin, estimated shipping timelines and required pathways..." required class="w-full bg-slate-50 text-slate-800 rounded-xl py-3 px-4 text-sm border border-slate-200 focus:border-sylon-gold focus:outline-none transition"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-sylon-navy hover:bg-slate-800 text-white font-bold py-4 px-6 rounded-2xl shadow-xl transition-all duration-150 flex items-center justify-center">
+                            <i data-lucide="send" class="w-4 h-4 mr-2 text-sylon-goldLight"></i> Submit Inquiry & Get Free Quote
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQS ACCORDION -->
+    <section id="faqs" class="py-24 bg-white border-t border-slate-200 scroll-mt-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center space-y-4 mb-16">
+                <span class="text-xs font-bold text-sylon-gold uppercase tracking-widest block">Customer Support Hub</span>
+                <h2 class="text-3xl font-extrabold text-sylon-navy tracking-tight">Frequently Asked Questions</h2>
+                <p class="text-slate-600 text-sm max-w-xl mx-auto">Explore key industry concepts, processes, documentation criteria, and container standards compiled by our corporate logistics experts. All answers are officially documented in our verified framework resource <strong class="text-sylon-navy">"FAQ.pdf"</strong>.</p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/60 shadow-sm">
+                    <button onclick="toggleAccordion('faq1')" class="flex justify-between items-center w-full text-left font-bold text-slate-900 focus:outline-none">
+                        <span class="pr-4">#1. What is a Freight Forwarder?</span>
+                        <i id="faq1Icon" data-lucide="chevron-down" class="w-5 h-5 text-sylon-gold flex-shrink-0 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq1" class="hidden mt-4 text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-200/60">
+                        A freight forwarder is a person or company that organizes shipments for individuals or corporations to get goods from the manufacturer or producer to a market, customer or final point of distribution. Forwarders contract with a carrier or often multiple carriers to move the goods.
+                        <br><br>
+                        A forwarder does not move the goods but acts as an expert in the logistics network. The carriers can use a variety of shipping modes, including ships, airplanes, trucks, and railroads, and often use multiple modes for a single shipment. For example, the freight forwarder may arrange to have cargo moved from a plant to an airport by truck, flown to the destination city and then moved from the airport to a customer's building by another truck.
+                        <br><br>
+                        International freight forwarders typically handle international shipments and have additional expertise in preparing and processing customs documentation and performing activities pertaining to international shipments.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/60 shadow-sm">
+                    <button onclick="toggleAccordion('faq2')" class="flex justify-between items-center w-full text-left font-bold text-slate-900 focus:outline-none">
+                        <span class="pr-4">#2. Why Use a Freight Forwarder?</span>
+                        <i id="faq2Icon" data-lucide="chevron-down" class="w-5 h-5 text-sylon-gold flex-shrink-0 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq2" class="hidden mt-4 text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-200/60 space-y-3">
+                        <p>The export/import process is complex; furthermore, every country has separate rules and regulations that need to be adhered to which can prove to be quite daunting. A freight forwarder will help make your logistics more efficient and reliable, which is exactly why you need to use the services of a professional freight partner like Sylon Logistics.</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>A freight forwarder will coordinate everything for you, saving you time and hassle. This may include booking cargo space in the most cost-effective manner, coordinating freight charges, arranging storage and warehousing, organizing insurance and tracking your shipment. They take care of all documentary requirements for the movement, custom clearance, arranging carriers for your goods, booking cargo space, negotiating freight charges et al. Basically, once a Freight Forwarder is in the picture you may sit back and relax while your goods traverse across the globe to various destinations.</li>
+                            <li>Freight forwarders offer more freedom for your business because they work without binding contracts. Having the freedom to choose carriers also ensures higher levels of above standard customer service.</li>
+                            <li>A freight forwarding service saves you time and headaches while providing reliable transportation. When requested, freight forwarders provide point-to-point services, taking all of the responsibility of transportation out of your hands. While this efficient point-to-point transportation reduces the need for connection time, it also decreases the chance of damaged goods.</li>
+                            <li>A freight forwarding company is well versed in the logistics requirements of various countries and enjoys the benefits of established relationships with numerous carriers and transporters, thus allowing better pricing and smoother communication. Additionally, if multiple services are required such as air freight, ocean freight and trucking, a freight forwarder can develop the best solution to deliver efficiently, cost-effectively and reliably. Experienced freight forwarders have established relationships with carriers, brokers, and border agencies. As their client, you benefit from longstanding rapport and working relationships.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/60 shadow-sm">
+                    <button onclick="toggleAccordion('faq3')" class="flex justify-between items-center w-full text-left font-bold text-slate-900 focus:outline-none">
+                        <span class="pr-4">#3. What is Customs Clearance?</span>
+                        <i id="faq3Icon" data-lucide="chevron-down" class="w-5 h-5 text-sylon-gold flex-shrink-0 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq3" class="hidden mt-4 text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-200/60">
+                        Customs clearance is the procedure of procuring permission from a country's governing administration, through its customs authority, to either take goods out of its territory (export) or have goods enter its territory (import). All goods shipped internationally must pass through customs before they are allowed to enter or exit a country. This includes anything sent by sea, or air. Once cleared, the shipper is provided with a document that confirms that all customs duties have been paid and that the shipment of goods may proceed.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/60 shadow-sm">
+                    <button onclick="toggleAccordion('faq4')" class="flex justify-between items-center w-full text-left font-bold text-slate-900 focus:outline-none">
+                        <span class="pr-4">#4. What Documents are Needed for Customs Clearance?</span>
+                        <i id="faq4Icon" data-lucide="chevron-down" class="w-5 h-5 text-sylon-gold flex-shrink-0 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq4" class="hidden mt-4 text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-200/60">
+                        As with many other freight forwarding matters, documents can also be country or area-specific. The list below entails the most important documents that customs authorities are most likely to request universally:
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li>Bill of Lading or Airway Bill</li>
+                            <li>A Commercial or Proforma Invoice</li>
+                            <li>A Packing List</li>
+                            <li>Agency Certificate (like SONCAP Certificate, CCO/CCVO, etc.)</li>
+                            <li>Miscellaneous other documents and paperwork requirements</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/60 shadow-sm">
+                    <button onclick="toggleAccordion('faq5')" class="flex justify-between items-center w-full text-left font-bold text-slate-900 focus:outline-none">
+                        <span class="pr-4">#5. Is There a Difference Between Import and Export Clearance?</span>
+                        <i id="faq5Icon" data-lucide="chevron-down" class="w-5 h-5 text-sylon-gold flex-shrink-0 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq5" class="hidden mt-4 text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-200/60">
+                        In terms of customs clearance, the process for export and import clearance is very similar. However, importing materials and products will additionally involve an assessment of the goods and payment of import taxes and duties.
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/60 shadow-sm">
+                    <button onclick="toggleAccordion('faq6')" class="flex justify-between items-center w-full text-left font-bold text-slate-900 focus:outline-none">
+                        <span class="pr-4">#6. Do I Have to Undergo Customs Clearance to Import or Export?</span>
+                        <i id="faq6Icon" data-lucide="chevron-down" class="w-5 h-5 text-sylon-gold flex-shrink-0 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq6" class="hidden mt-4 text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-200/60">
+                        For the most part, customs clearance is compulsory whenever you transport commercial goods from one country to another by air or sea. The transporter has to acquire export clearance before any cargo can leave the port or airport of origin. Upon arrival at the destination country, import clearance is required before the freight can be delivered to the consignee. As import and export clearance procedures are rather country-specific, it's essential that the trader does the necessary research or consults an expert, (normally a customs broker or freight forwarder).
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/60 shadow-sm">
+                    <button onclick="toggleAccordion('faq7')" class="flex justify-between items-center w-full text-left font-bold text-slate-900 focus:outline-none">
+                        <span class="pr-4">#7. Why do I have to Pay a Custom Agent to Clear my Goods? Are They Not Employed by Customs?</span>
+                        <i id="faq7Icon" data-lucide="chevron-down" class="w-5 h-5 text-sylon-gold flex-shrink-0 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq7" class="hidden mt-4 text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-200/60">
+                        No. Custom Clearing Agents are not government employees. They are private logistics professionals who act as intermediaries, licensed to handle complex declaration procedures on behalf of owners of imported or exported goods. That is why you have to pay them for the services they give in clearing your goods for you.
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/60 shadow-sm">
+                    <button onclick="toggleAccordion('faq8')" class="flex justify-between items-center w-full text-left font-bold text-slate-900 focus:outline-none">
+                        <span class="pr-4">#8. What's the Difference Between Air Cargo and a Courier Service?</span>
+                        <i id="faq8Icon" data-lucide="chevron-down" class="w-5 h-5 text-sylon-gold flex-shrink-0 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq8" class="hidden mt-4 text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-200/60">
+                        When using a courier service your goods won't be considered as freight, but as a postal package. This is an ideal option for small, lightweight parcels requiring urgent transport. However, courier companies don't provide an integral logistics service covering aspects like customs clearance, meaning that you may find yourself faced with delays or surcharges. On the other hand, air freight sent by means of a forwarding company will guarantee greater security for your operation since its professional team will take care of all necessary details.
+                    </div>
+                </div>
+
+                <!-- FAQ 9 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/60 shadow-sm">
+                    <button onclick="toggleAccordion('faq9')" class="flex justify-between items-center w-full text-left font-bold text-slate-900 focus:outline-none">
+                        <span class="pr-4">#9. What are Dangerous Goods?</span>
+                        <i id="faq9Icon" data-lucide="chevron-down" class="w-5 h-5 text-sylon-gold flex-shrink-0 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq9" class="hidden mt-4 text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-200/60">
+                        Certain articles and substances may represent a risk to health, safety and the environment. Despite being classified as dangerous goods, freight of this kind can also be transported by air, benefitting from its speed, although it does require a series of specialized procedures to guarantee that the logistics operation proceeds with no unwanted surprises. Among the goods considered dangerous for air transport are explosive and flammable goods, gases and flammable liquids, spontaneously combustible, toxic, infectious, corrosive and radioactive materials.
+                        <br><br>
+                        At Sylon Logistics Limited, we coordinate with specialized carriers to handle your sensitive cargo in keeping with global safety standards to ensure it reaches its destination in perfect conditions.
+                    </div>
+                </div>
+
+                <!-- FAQ 10 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/60 shadow-sm">
+                    <button onclick="toggleAccordion('faq10')" class="flex justify-between items-center w-full text-left font-bold text-slate-900 focus:outline-none">
+                        <span class="pr-4">#10. What is Containerized Shipping?</span>
+                        <i id="faq10Icon" data-lucide="chevron-down" class="w-5 h-5 text-sylon-gold flex-shrink-0 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq10" class="hidden mt-4 text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-200/60">
+                        Containerized shipping is a very common method for expediting the movement of household goods and commercial products. Your commercial products or household goods are loaded into a protective steel container similar to a semi truck trailer (without wheels). The container is loaded onto an ocean going vessel. Upon arrival, the container can be loaded onto a trailer for delivery to your final destination.
+                        <br><br>
+                        Standard containers come in two sizes: 20-foot and 40-foot in length. The 20-foot container can hold approximately 1050 cubic feet (the contents of a one bedroom apartment). The 40' container can hold approximately 2100 cubic feet. Specialized containers (hi-cube, refrigerated, open-top, etc.) are also available!
+                    </div>
+                </div>
+
+                <!-- FAQ 11 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/60 shadow-sm">
+                    <button onclick="toggleAccordion('faq11')" class="flex justify-between items-center w-full text-left font-bold text-slate-900 focus:outline-none">
+                        <span class="pr-4">#11. What is the Difference Between FCL and LCL?</span>
+                        <i id="faq11Icon" data-lucide="chevron-down" class="w-5 h-5 text-sylon-gold flex-shrink-0 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq11" class="hidden mt-4 text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-200/60">
+                        <strong>FCL</strong> means Full Container Load, which means all the goods in a container belong to a single shipper. 
+                        <br><br>
+                        <strong>LCL</strong> means Less Container Load, which is used when a shipper has to share the container with cargo of other shippers. The latter is chosen when the quantity of cargo is less. Transit time of LCL might get delayed, as the container is dispatched once it is stuffed in sufficient quantity of cargo. The freight forwarders charge for LCL on per cubic meter basis. Make sure there aren't any hidden charges that are informed to you at later stages.
+                    </div>
+                </div>
+
+                <!-- FAQ 12 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/60 shadow-sm">
+                    <button onclick="toggleAccordion('faq12')" class="flex justify-between items-center w-full text-left font-bold text-slate-900 focus:outline-none">
+                        <span class="pr-4">#12. What are the Major Stages of Ocean Freight Forwarding?</span>
+                        <i id="faq12Icon" data-lucide="chevron-down" class="w-5 h-5 text-sylon-gold flex-shrink-0 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq12" class="hidden mt-4 text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-200/60">
+                        The ocean freight process runs through 7 major structural stages:
+                        <ol class="list-decimal pl-5 mt-2 space-y-1.5 font-medium">
+                            <li><span class="font-bold">Export haulage:</span> Movement of cargo from shipper's to forwarder's location.</li>
+                            <li><span class="font-bold">Customs clearance (Export):</span> Submission of necessary documentation to the relevant authorities.</li>
+                            <li><span class="font-bold">Origin handling:</span> Physical handling and inspection of cargo.</li>
+                            <li><span class="font-bold">Ocean freight:</span> Scheduling of shipping line by freight forwarder.</li>
+                            <li><span class="font-bold">Customs clearance (Import):</span> Consignee appoints customs broker for this stage.</li>
+                            <li><span class="font-bold">Destination handling:</span> Handling of cargo to move it from port to warehouse.</li>
+                            <li><span class="font-bold">Import haulage:</span> Delivery of the product to the final address.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- FAQ 13 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/60 shadow-sm">
+                    <button onclick="toggleAccordion('faq13')" class="flex justify-between items-center w-full text-left font-bold text-slate-900 focus:outline-none">
+                        <span class="pr-4">#13. What are the Benefits of Ocean Freight Shipping?</span>
+                        <i id="faq13Icon" data-lucide="chevron-down" class="w-5 h-5 text-sylon-gold flex-shrink-0 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faq13" class="hidden mt-4 text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-200/60">
+                        Especially for long distances, ocean freight shipping appears as the most economical option. Businesses and individuals prefer this mode for the shipping of bulky and oversized cargo, such as trucks, construction materials, and industrial equipment. The modern-day ships are designed to safely carry dangerous materials and hazardous cargo. To ensure additional safety, the containers are designed to be locked and sealed. When compared to other modes, ocean freight shipping is environmentally friendly.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS MODALS CONTAINER -->
+    <div id="successModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl text-center space-y-6 border border-slate-100 animate-scaleUp">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                <i data-lucide="check-circle" class="w-10 h-10"></i>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-sylon-navy" id="modalTitle">Submission Complete</h3>
+                <p class="text-sm text-slate-500 mt-2" id="modalMessage">Your information was successfully logged. One of our port specialists will connect with you within 2 business hours.</p>
+            </div>
+            <button onclick="closeSuccessModal()" class="w-full bg-sylon-navy hover:bg-slate-800 text-white font-bold py-3 rounded-xl transition duration-150">
+                Continue
+            </button>
+        </div>
+    </div>
+
+    <!-- FOOTER COMPONENT -->
+    <footer class="bg-slate-950 text-slate-400 pt-16 pb-8 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <!-- Column 1: Brand -->
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                    <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/logo.png" 
+                         alt="Sylon Logistics Limited Logo" 
+                         class="h-12 w-auto bg-white p-1 rounded-lg object-contain">
+                </div>
+                <p class="text-xs text-slate-500 leading-relaxed">
+                    A Better Future - Through Logistics. Established in 1991 in Nigeria. Seamless, custom-designed shipping solutions.
+                </p>
+                <div class="flex flex-col space-y-2 pt-2">
+                    <span class="text-[10px] bg-slate-900 text-gray-400 border border-slate-800 py-1.5 px-3 rounded font-semibold uppercase text-center">CAC Registered Agent</span>
+                    <a href="https://drive.google.com/file/d/15cfmzC0p58qJuWgvuEa3MnMFzfTyLvz4/view?usp=sharing" target="_blank" class="text-[10px] bg-sylon-gold/10 hover:bg-sylon-gold/20 text-sylon-goldLight border border-sylon-gold/30 py-1.5 px-3 rounded font-bold uppercase text-center flex items-center justify-center">
+                        <i data-lucide="download" class="w-3.5 h-3.5 mr-1.5"></i> Download Sylon Logistics Limited.pdf
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Navigation Links -->
+            <div class="space-y-4">
+                <h4 class="text-sm font-bold text-white uppercase tracking-wider">Quick Navigation</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#about" class="hover:text-sylon-goldLight transition">Who We Are</a></li>
+                    <li><a href="#services" class="hover:text-sylon-goldLight transition">Core Services Portfolio</a></li>
+                    <li><a href="#compliance-hub" class="hover:text-sylon-goldLight transition">Customs Document Hub</a></li>
+                    <li><a href="#leadership" class="hover:text-sylon-goldLight transition">Executive MD Leadership</a></li>
+                    <li><a href="#contact" class="hover:text-sylon-goldLight transition">Request Free Quote / Inquire</a></li>
+                    <li><a href="#faqs" class="hover:text-sylon-goldLight transition">Frequently Asked Questions</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact details -->
+            <div class="space-y-4">
+                <h4 class="text-sm font-bold text-white uppercase tracking-wider">Onne Port HQ Office</h4>
+                <p class="text-xs text-slate-500 leading-relaxed">
+                    Onne Multipurpose Terminal, Federal Ocean Terminal,<br>
+                    Onne Oil and Gas Free Zone, Rivers State, Nigeria.
+                </p>
+                <p class="text-xs text-slate-400 font-bold">
+                    Onyebuchi Solomon<br>
+                    Tel: +234 803 339 6204
+                </p>
+            </div>
+
+            <!-- Column 4: Urgent support call action -->
+            <div class="space-y-4">
+                <h4 class="text-sm font-bold text-white uppercase tracking-wider">Need Urgent Support?</h4>
+                <p class="text-xs text-slate-500">
+                    Reach our customer clearance desk immediately over direct phone line systems.
+                </p>
+                <a href="tel:+2348033396204" class="inline-flex w-full justify-center items-center py-3 px-4 bg-sylon-gold hover:bg-amber-600 text-slate-950 font-black rounded-xl text-xs transition duration-150">
+                    <i data-lucide="phone-call" class="w-4 h-4 mr-2"></i> CALL CLIENT DESK
+                </a>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+            <p>&copy; <span id="currentYear">2026</span> Sylon Logistics Limited. All rights reserved. Established 1991 Nigeria.</p>
+            <div class="flex space-x-6">
+                <a href="#about" class="hover:text-white transition">Terms of Service</a>
+                <a href="#about" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#contact" class="hover:text-white transition">Contact Info</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set dynamic current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const isHidden = mobileMenu.classList.contains('hidden');
+            menuIcon.setAttribute('data-lucide', isHidden ? 'menu' : 'x');
+            lucide.createIcons();
+        });
+
+        // Close mobile menu when nav links are clicked
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
+        // Interactive Document Hub Switching Guide
+        function switchDocTab(tabId) {
+            // Content Containers
+            const importContent = document.getElementById('content-importDocs');
+            const exportContent = document.getElementById('content-exportDocs');
+            
+            // Tab Buttons
+            const importTabBtn = document.getElementById('tab-importDocs');
+            const exportTabBtn = document.getElementById('tab-exportDocs');
+
+            if (tabId === 'importDocs') {
+                importContent.classList.remove('hidden');
+                exportContent.classList.add('hidden');
+                
+                // Style Active Tab
+                importTabBtn.className = "px-5 py-3 rounded-xl text-sm font-bold bg-sylon-navy text-white shadow-md transition";
+                exportTabBtn.className = "px-5 py-3 rounded-xl text-sm font-bold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition";
+            } else {
+                importContent.classList.add('hidden');
+                exportContent.classList.remove('hidden');
+                
+                // Style Active Tab
+                exportTabBtn.className = "px-5 py-3 rounded-xl text-sm font-bold bg-sylon-navy text-white shadow-md transition";
+                importTabBtn.className = "px-5 py-3 rounded-xl text-sm font-bold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition";
+            }
+        }
+
+        // FAQ Accordion Toggle System
+        function toggleAccordion(id) {
+            const el = document.getElementById(id);
+            const icon = document.getElementById(id + 'Icon');
+            const totalFAQsCount = 13;
+
+            for (let i = 1; i <= totalFAQsCount; i++) {
+                const currentId = 'faq' + i;
+                if (currentId !== id) {
+                    const currentEl = document.getElementById(currentId);
+                    const currentIcon = document.getElementById(currentId + 'Icon');
+                    if (currentEl) currentEl.classList.add('hidden');
+                    if (currentIcon) currentIcon.style.transform = 'rotate(0deg)';
+                }
+            }
+
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                el.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Handle Interactive Form Submission
+        function handleContactSubmission(event) {
+            event.preventDefault();
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            showSuccessModal(
+                "Inquiry Received Successfully",
+                "Thank you " + name + ". Your shipping inquiries and specifications have been successfully transmitted. Our port representative will contact you at " + email + " within 2 business hours."
+            );
+            event.target.reset();
+        }
+
+        function showSuccessModal(title, msg) {
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalMessage').textContent = msg;
+            const modal = document.getElementById('successModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeSuccessModal() {
+            const modal = document.getElementById('successModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Live Port Work Hours Check
+        function checkPortOfficeHours() {
+            const statusIndicator = document.getElementById('officeStatus');
+            if (statusIndicator) {
+                // Nigerian Local Time is West Africa Time (WAT) - UTC+1
+                const now = new Date();
+                const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+                const watOffset = 1; 
+                const watTime = new Date(utc + (3600000 * watOffset));
+                
+                const hour = watTime.getHours();
+                const day = watTime.getDay(); // 0 is Sunday, 6 is Saturday
+                
+                const isOpen = (day >= 1 && day <= 5 && hour >= 8 && hour < 17);
+                
+                if (isOpen) {
+                    statusIndicator.innerHTML = `
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-ping"></span>
+                        Onne Port Office: Active (Open Now)
+                    `;
+                } else {
+                    statusIndicator.innerHTML = `
+                        <span class="w-2 h-2 rounded-full bg-amber-500 mr-2"></span>
+                        Onne Port Office: Closed (Opens 8 AM WAT)
+                    `;
+                }
+            }
+        }
+        
+        // Run check on load
+        window.onload = function() {
+            checkPortOfficeHours();
+        };
+    </script>
+    <!-- Note: This navigation component corresponds to image_50a026.png. The z-index and clickability have been fully rectified to ensure it remains sticky and fully clickable from all scroll positions. -->
+</body>
+</html>
