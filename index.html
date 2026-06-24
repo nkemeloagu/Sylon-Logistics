@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sylon Logistics Limited - Clearing, Forwarding & Supply Chain Services Nigeria</title>
+    
+    <!-- FAVICON INTEGRATION (Utilizing official company logo) -->
+    <link rel="icon" type="image/png" href="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/logo.png">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts Inter -->
@@ -60,7 +64,7 @@
         }
     </style>
 </head>
-<body class="bg-sylon-ice text-slate-800 font-sans antialiased overflow-x-hidden">
+<body class="bg-sylon-ice text-slate-800 font-sans antialiased overflow-x-hidden pt-12 md:pt-0">
 
     <!-- TOP NOTIFICATION STRIP -->
     <div class="bg-sylon-navy text-gray-200 text-xs py-2.5 px-4 border-b border-slate-800 hidden md:block">
@@ -79,8 +83,8 @@
         </div>
     </div>
 
-    <!-- MAIN NAVIGATION (Rectified z-index and clickability mapping to image_50a026.png) -->
-    <header class="sticky top-0 z-[1000] bg-white shadow-md transition-all duration-300 w-full">
+    <!-- MAIN NAVIGATION (High stacking context and clickability mapping strictly to image_c0553e.png & image_50a026.png) -->
+    <header class="sticky top-0 z-[1000] bg-white/95 backdrop-blur-md shadow-md transition-all duration-300 w-full pointer-events-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Brand Logo & Identity -->
@@ -95,19 +99,23 @@
                     </div>
                 </div>
 
-                <!-- Desktop Navigation Menu (Corresponds to image_50a026.png with enhanced z-index isolation) -->
-                <nav class="hidden lg:flex space-x-8 items-center font-semibold text-slate-600">
-                    <a href="#about" class="hover:text-sylon-gold transition-colors duration-200">Who We Are</a>
-                    <a href="#services" class="hover:text-sylon-gold transition-colors duration-200">Our Services</a>
-                    <a href="#compliance-hub" class="hover:text-sylon-gold transition-colors duration-200">Customs Info</a>
-                    <a href="#leadership" class="hover:text-sylon-gold transition-colors duration-200">Leadership</a>
-                    <a href="#contact" class="hover:text-sylon-gold transition-colors duration-200">Inquire Now</a>
-                    <a href="#faqs" class="hover:text-sylon-gold transition-colors duration-200">FAQs</a>
+                <!-- Desktop Navigation Menu (Corresponds directly to reference layout image_c0553e.png) -->
+                <nav class="hidden lg:flex space-x-5 xl:space-x-7 items-center font-semibold text-slate-600 text-sm xl:text-base">
+                    <a href="#about" class="hover:text-sylon-navy transition-colors duration-200">Who We Are</a>
+                    <a href="#services" class="hover:text-sylon-navy transition-colors duration-200">Our Services</a>
+                    <!-- Tracking Hub highlighted in orange/gold as shown in image_c0553e.png -->
+                    <a href="#tracking-hub" class="text-sylon-gold hover:text-amber-700 transition-colors duration-200 flex items-center font-bold">
+                        <i data-lucide="navigation" class="w-4 h-4 mr-1.5 rotate-45 text-sylon-gold"></i> Tracking Hub
+                    </a>
+                    <a href="#compliance-hub" class="hover:text-sylon-navy transition-colors duration-200">Customs Info</a>
+                    <a href="#leadership" class="hover:text-sylon-navy transition-colors duration-200">Leadership</a>
+                    <a href="#contact" class="hover:text-sylon-navy transition-colors duration-200">Inquire Now</a>
+                    <a href="#faqs" class="hover:text-sylon-navy transition-colors duration-200">FAQs</a>
                 </nav>
 
                 <!-- Action Button & Mobile Menu Toggle -->
                 <div class="flex items-center space-x-4">
-                    <!-- Link to Google Drive Company Profile -->
+                    <!-- Link to Google Drive Company Profile - Styled beautifully to match image_c0553e.png -->
                     <a href="https://drive.google.com/file/d/15cfmzC0p58qJuWgvuEa3MnMFzfTyLvz4/view?usp=sharing" target="_blank" class="hidden xl:inline-flex items-center justify-center px-4 py-2 border border-sylon-navy text-xs font-bold rounded-lg text-sylon-navy hover:bg-sylon-navy hover:text-white transition duration-200">
                         <i data-lucide="download" class="w-3.5 h-3.5 mr-1.5"></i> Corporate Profile
                     </a>
@@ -126,6 +134,7 @@
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <a href="#about" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-semibold hover:bg-slate-800 transition">Who We Are</a>
                 <a href="#services" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-semibold hover:bg-slate-800 transition">Our Services</a>
+                <a href="#tracking-hub" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-semibold text-sylon-goldLight hover:bg-slate-800 transition">Shipment Tracking Hub</a>
                 <a href="#compliance-hub" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-semibold hover:bg-slate-800 transition">Customs Info</a>
                 <a href="#leadership" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-semibold hover:bg-slate-800 transition">Leadership</a>
                 <a href="#contact" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-semibold hover:bg-slate-800 transition">Inquire Now</a>
@@ -170,8 +179,8 @@
                         <a href="#services" class="flex items-center justify-center px-8 py-4 text-base font-bold rounded-xl text-slate-900 bg-white hover:bg-slate-100 shadow-xl transition duration-300 hover:-translate-y-1">
                             Explore Services <i data-lucide="arrow-right" class="w-5 h-5 ml-2 text-sylon-navy"></i>
                         </a>
-                        <a href="#contact" class="flex items-center justify-center px-8 py-4 text-base font-bold rounded-xl text-white bg-sylon-gold hover:bg-amber-600 shadow-xl transition duration-300 hover:-translate-y-1 gold-glow">
-                            <i data-lucide="mail" class="w-5 h-5 mr-2"></i> Request Free Quote
+                        <a href="#tracking-hub" class="flex items-center justify-center px-8 py-4 text-base font-bold rounded-xl text-white bg-sylon-navy hover:bg-slate-800 border border-slate-700 shadow-xl transition duration-300 hover:-translate-y-1">
+                            <i data-lucide="search" class="w-5 h-5 mr-2 text-sylon-goldLight"></i> Track Shipment
                         </a>
                     </div>
 
@@ -280,7 +289,7 @@
                 <!-- Left: Storytelling Image & Overlay -->
                 <div class="relative space-y-4">
                     <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
-                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80" 
+                        <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/freight-forwarding-company-durban.jpg" 
                              class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105" alt="Warehouse logistics">
                         <div class="absolute inset-0 bg-gradient-to-t from-sylon-navy/80 to-transparent"></div>
                         <div class="absolute bottom-6 left-6 right-6 text-white">
@@ -467,7 +476,7 @@
                 </div>
             </div>
 
-            <!-- Custom Interactive Service Grid -->
+            <!-- Custom Service Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1: Freight Forwarding -->
                 <div class="bg-slate-50 rounded-2xl p-8 hover:bg-slate-900 hover:text-white transition-all duration-300 group border border-slate-100 flex flex-col justify-between min-h-[350px]">
@@ -580,6 +589,309 @@
                         <a href="#contact" class="text-slate-400 group-hover:text-sylon-goldLight transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
                             <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GLOBAL CARGO & SHIPMENT TRACKING HUB -->
+    <section id="tracking-hub" class="py-24 bg-slate-900 text-white scroll-mt-24 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs font-extrabold text-sylon-gold uppercase tracking-widest block">Client Tracking Desks</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Multi-Carrier Cargo Tracking Hub</h2>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Access real-time positioning and dispatch schedules by selecting your logistics vendor portal below. Compiled in keeping with instructions illustrated in our digital clearance handbooks <span class="font-semibold text-white"></span>, <span class="font-semibold text-white"></span>, <span class="font-semibold text-white"></span>, and <span class="font-semibold text-white"></span>.
+                </p>
+            </div>
+
+            <!-- TAB CONTROLLER (Interactive Filtering) -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button onclick="filterTracking('all')" id="trackTab-all" class="px-5 py-2.5 rounded-full text-xs font-bold bg-sylon-gold text-slate-950 transition shadow-lg">
+                    Show All Portals
+                </button>
+                <button onclick="filterTracking('air')" id="trackTab-air" class="px-5 py-2.5 rounded-full text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">
+                    <i data-lucide="plane" class="w-3.5 h-3.5 inline mr-1"></i> Air Cargo Tracking
+                </button>
+                <button onclick="filterTracking('courier')" id="trackTab-courier" class="px-5 py-2.5 rounded-full text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">
+                    <i data-lucide="truck" class="w-3.5 h-3.5 inline mr-1"></i> Courier &amp; Door-to-Door
+                </button>
+                <button onclick="filterTracking('sea')" id="trackTab-sea" class="px-5 py-2.5 rounded-full text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">
+                    <i data-lucide="anchor" class="w-3.5 h-3.5 inline mr-1"></i> Sea Cargo Tracking
+                </button>
+            </div>
+
+            <!-- AIR CARGO TRACKING CATEGORY -->
+            <div id="airCargoGroup" class="tracking-group space-y-8 mb-16">
+                <div class="border-b border-slate-800 pb-3">
+                    <h3 class="text-xl font-bold text-sylon-goldLight flex items-center">
+                        <i data-lucide="plane-takeoff" class="mr-2"></i> AIR CARGO TRACKING <span class="ml-2 text-xs text-slate-500 font-normal"></span>
+                    </h3>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Air France -->
+                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
+                        <div>
+                            <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/Airfrance.jpg" alt="Air France Cargo" class="w-full h-36 object-cover opacity-80">
+                            <div class="p-5">
+                                <h4 class="text-sm font-extrabold uppercase tracking-wider text-white">Air France</h4>
+                                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                                    Track cargo(es) forwarded via Airfrance. Input your airway bill number, then "track."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <a href="https://www.afklcargo.com/mycargo/shipment/singlesearch" target="_blank" class="w-full text-center inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2 px-4 rounded-lg transition">Click here</a>
+                        </div>
+                    </div>
+
+                    <!-- Cargolux -->
+                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
+                        <div>
+                            <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/cargolux.png" alt="Cargolux" class="w-full h-36 object-cover opacity-80">
+                            <div class="p-5">
+                                <h4 class="text-sm font-extrabold uppercase tracking-wider text-white">Cargolux</h4>
+                                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                                    Track and trace your Cargolux shipments. Type in your airway bill number and "track."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <a href="https://www.cargolux.com/Home" target="_blank" class="w-full text-center inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2 px-4 rounded-lg transition">Click here</a>
+                        </div>
+                    </div>
+
+                    <!-- DHL Aviation Cargo -->
+                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
+                        <div>
+                            <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/DHL%20Aviation.png" alt="DHL Aviation" class="w-full h-36 object-cover opacity-80">
+                            <div class="p-5">
+                                <h4 class="text-sm font-extrabold uppercase tracking-wider text-white">DHL Aviation Cargo</h4>
+                                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                                    To track your DHL cargo, find "track your shipment" at the bottom of the page. Input your airway bill number and enter "track."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <a href="https://aviationcargo.dhl.com/" target="_blank" class="w-full text-center inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2 px-4 rounded-lg transition">Click here</a>
+                        </div>
+                    </div>
+
+                    <!-- Lufthansa Cargo -->
+                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
+                        <div>
+                            <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/Lufthansa.png" class="w-full h-36 object-cover opacity-80" alt="Lufthansa">
+                            <div class="p-5">
+                                <h4 class="text-sm font-extrabold uppercase tracking-wider text-white">Lufthansa Cargo</h4>
+                                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                                    Have a shipment with Lufthansa? Type in the AWB number and "search."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <a href="https://lufthansa-cargo.com/eservices/etracking" target="_blank" class="w-full text-center inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2 px-4 rounded-lg transition">Click here</a>
+                        </div>
+                    </div>
+
+                    <!-- Qatar Airways -->
+                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
+                        <div>
+                            <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/Qatar.png" alt="Qatar Airways Cargo" class="w-full h-36 object-cover opacity-80">
+                            <div class="p-5">
+                                <h4 class="text-sm font-extrabold uppercase tracking-wider text-white">Qatar Airways</h4>
+                                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                                    To track your Qatar shipment, type in your master airway bill number and click "go." (Note that the prefix (157) is already in place; so simply type in the other eight (8) numbers.)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <a href="https://www.qrcargo.com/" target="_blank" class="w-full text-center inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2 px-4 rounded-lg transition">Click here</a>
+                        </div>
+                    </div>
+
+                    <!-- Turkish Airline Cargo -->
+                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
+                        <div>
+                            <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/Turkish.png" alt="Turkish Cargo" class="w-full h-36 object-cover opacity-80">
+                            <div class="p-5">
+                                <h4 class="text-sm font-extrabold uppercase tracking-wider text-white">Turkish Airline Cargo</h4>
+                                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                                    To track your Turkish Airline Cargo, click on "shipment tracking" on the home page; type in your airway bill number, then click on "list."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <a href="https://www.turkishcargo.com.tr/en" target="_blank" class="w-full text-center inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2 px-4 rounded-lg transition">Click here</a>
+                        </div>
+                    </div>
+
+                    <!-- UPS AIR CARGO -->
+                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
+                        <div>
+                            <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/ups.png" alt="UPS Air Cargo" class="w-full h-36 object-cover opacity-80">
+                            <div class="p-5">
+                                <h4 class="text-sm font-extrabold uppercase tracking-wider text-white">UPS AIR CARGO</h4>
+                                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                                    If you have a cargo shipment via UPS you want to track, type in the tracking number and click "track." (Note that the prefix (406) is already in place, so you do not need to type it in again.)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <a href="https://aircargo.ups.com/en-us/Tracking" target="_blank" class="w-full text-center inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2 px-4 rounded-lg transition">Click here</a>
+                        </div>
+                    </div>
+
+                    <!-- General Air Cargo Tracking -->
+                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
+                        <div>
+                            <div class="bg-slate-700 flex items-center justify-center h-36">
+                                <i data-lucide="package-search" class="w-16 h-16 text-sylon-gold"></i>
+                            </div>
+                            <div class="p-5">
+                                <h4 class="text-sm font-extrabold uppercase tracking-wider text-white">GENERAL AIR CARGO TRACKING</h4>
+                                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                                    If your carrier was not indicated above, you can track your air cargo shipment by inputting your 11-digit airway bill number, then track with either of the options you prefer. Scroll to the bottom of the site to view supported airlines.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <a href="https://touch.track-trace.com/aircargo" target="_blank" class="w-full text-center inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2 px-4 rounded-lg transition">Click here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COURIER / DOOR-TO-DOOR TRACKING -->
+            <div id="courierGroup" class="tracking-group space-y-8 mb-16">
+                <div class="border-b border-slate-800 pb-3">
+                    <h3 class="text-xl font-bold text-cyan-400 flex items-center">
+                        <i data-lucide="box" class="mr-2"></i> COURIER / DOOR-TO-DOOR TRACKING <span class="ml-2 text-xs text-slate-500 font-normal"></span>
+                    </h3>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- DHL Express -->
+                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-cyan-400 transition-all">
+                        <div>
+                            <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/dhl.png" alt="DHL Express" class="w-full h-36 object-cover opacity-80">
+                            <div class="p-5">
+                                <h4 class="text-sm font-extrabold uppercase tracking-wider text-white">DHL EXPRESS SERVICES</h4>
+                                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                                    Type in your tracking number to track your DHL express shipment and "track."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <a href="http://www.dhl.com.ng/en/express/tracking.html" target="_blank" class="w-full text-center inline-block bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-bold text-xs py-2 px-4 rounded-lg transition">Click here</a>
+                        </div>
+                    </div>
+
+                    <!-- FedEx Express -->
+                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-cyan-400 transition-all">
+                        <div>
+                            <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/fedex.png" alt="FedEx International" class="w-full h-36 object-cover opacity-80">
+                            <div class="p-5">
+                                <h4 class="text-sm font-extrabold uppercase tracking-wider text-white">FEDEX EXPRESS</h4>
+                                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                                    To track your International FedEx shipment, input your tracking id and "track."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <a href="https://fedex.com/" target="_blank" class="w-full text-center inline-block bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-bold text-xs py-2 px-4 rounded-lg transition">Click here</a>
+                        </div>
+                    </div>
+
+                    <!-- FedEx Redstar Express -->
+                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-cyan-400 transition-all">
+                        <div>
+                            <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/fedexred.png" alt="Red Star Express" class="w-full h-36 object-cover opacity-80">
+                            <div class="p-5">
+                                <h4 class="text-sm font-extrabold uppercase tracking-wider text-white">FEDEX REDSTAR EXPRESS</h4>
+                                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                                    To track your domestic FedEx/Redstar shipments, in the "Quick Service" section, enter your tracking number and "track."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <a href="https://redstarplc.com/" target="_blank" class="w-full text-center inline-block bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-bold text-xs py-2 px-4 rounded-lg transition">Click here</a>
+                        </div>
+                    </div>
+
+                    <!-- United Parcel Services -->
+                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-cyan-400 transition-all">
+                        <div>
+                            <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/upscourier.png" alt="UPS Ground" class="w-full h-36 object-cover opacity-80">
+                            <div class="p-5">
+                                <h4 class="text-sm font-extrabold uppercase tracking-wider text-white">UNITED PARCEL SERVICES</h4>
+                                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                                    Input your tracking number and click on ">" or hit enter on your keyboard to track your UPS courier shipment.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <a href="https://www.ups.com/ng/en/services/tracking/information.page" target="_blank" class="w-full text-center inline-block bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-bold text-xs py-2 px-4 rounded-lg transition">Click here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEA CARGO TRACKING -->
+            <div id="seaCargoGroup" class="tracking-group space-y-8">
+                <div class="border-b border-slate-800 pb-3">
+                    <h3 class="text-xl font-bold text-emerald-400 flex items-center">
+                        <i data-lucide="anchor" class="mr-2"></i> SEA CARGO TRACKING <span class="ml-2 text-xs text-slate-500 font-normal"></span>
+                    </h3>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Mediterranean Shipping Company (MSC) -->
+                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-emerald-400 transition-all">
+                        <div>
+                            <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/medrr.png" alt="MSC Ship" class="w-full h-44 object-cover opacity-80">
+                            <div class="p-6">
+                                <h4 class="text-base font-extrabold uppercase tracking-wider text-white">MEDITERRANEAN SHIPPING COMPANY</h4>
+                                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                                    To track your container with MSC, type in either your booking number, container number or bill of lading and click on the search icon or press enter on your keyboard.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="https://www.msc.com/track-a-shipment" target="_blank" class="w-full text-center inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-2.5 px-4 rounded-lg transition">Click here</a>
+                        </div>
+                    </div>
+
+                    <!-- Maersk Line -->
+                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-emerald-400 transition-all">
+                        <div>
+                            <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/mearsk.png" alt="Maersk Vessel" class="w-full h-44 object-cover opacity-80">
+                            <div class="p-6">
+                                <h4 class="text-base font-extrabold uppercase tracking-wider text-white">MAERSK LINE</h4>
+                                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                                    Simply type in your tracking number and "track" to find out the status of your MAERSK cargo.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="https://www.maersk.com/" target="_blank" class="w-full text-center inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-2.5 px-4 rounded-lg transition">Click here</a>
+                        </div>
+                    </div>
+
+                    <!-- General Container Tracker -->
+                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-emerald-400 transition-all">
+                        <div>
+                            <div class="bg-slate-700 flex items-center justify-center h-44">
+                                <i data-lucide="container" class="w-20 h-20 text-emerald-400"></i>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-base font-extrabold uppercase tracking-wider text-white">GENERAL CONTAINER TRACKING</h4>
+                                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                                    If your shipping line was not listed, you can track your container by typing in your container number, then track with either of the options you prefer. Scroll to the bottom of the site to view available shipping companies.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="https://www.track-trace.com/container" target="_blank" class="w-full text-center inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-2.5 px-4 rounded-lg transition">Click here</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -953,7 +1265,7 @@
             <div class="text-center space-y-4 mb-16">
                 <span class="text-xs font-bold text-sylon-gold uppercase tracking-widest block">Customer Support Hub</span>
                 <h2 class="text-3xl font-extrabold text-sylon-navy tracking-tight">Frequently Asked Questions</h2>
-                <p class="text-slate-600 text-sm max-w-xl mx-auto">Explore key industry concepts, processes, documentation criteria, and container standards compiled by our corporate logistics experts.</strong></p>
+                <p class="text-slate-600 text-sm max-w-xl mx-auto">Explore key industry concepts, processes, documentation criteria, and container standards compiled by our corporate logistics experts.<strong class="text-slate-900"></strong>.</p>
             </div>
             
             <div class="space-y-4">
@@ -1178,6 +1490,7 @@
                 <ul class="space-y-2 text-xs">
                     <li><a href="#about" class="hover:text-sylon-goldLight transition">Who We Are</a></li>
                     <li><a href="#services" class="hover:text-sylon-goldLight transition">Core Services Portfolio</a></li>
+                    <li><a href="#tracking-hub" class="hover:text-sylon-goldLight transition">Carrier Tracking Hub</a></li>
                     <li><a href="#compliance-hub" class="hover:text-sylon-goldLight transition">Customs Document Hub</a></li>
                     <li><a href="#leadership" class="hover:text-sylon-goldLight transition">Executive MD Leadership</a></li>
                     <li><a href="#contact" class="hover:text-sylon-goldLight transition">Request Free Quote / Inquire</a></li>
@@ -1220,6 +1533,7 @@
         </div>
     </footer>
 
+    <!-- Interactive Scripts -->
     <script>
         // Set dynamic current year in footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -1272,6 +1586,49 @@
                 // Style Active Tab
                 exportTabBtn.className = "px-5 py-3 rounded-xl text-sm font-bold bg-sylon-navy text-white shadow-md transition";
                 importTabBtn.className = "px-5 py-3 rounded-xl text-sm font-bold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition";
+            }
+        }
+
+        // Shipment tracking category filters (References design guidelines from image_be1243.png, image_be0f21.jpg, image_be0f79.jpg, and image_be0f82.jpg)
+        function filterTracking(category) {
+            const air = document.getElementById('airCargoGroup');
+            const courier = document.getElementById('courierGroup');
+            const sea = document.getElementById('seaCargoGroup');
+            
+            const btnAll = document.getElementById('trackTab-all');
+            const btnAir = document.getElementById('trackTab-air');
+            const btnCourier = document.getElementById('trackTab-courier');
+            const btnSea = document.getElementById('trackTab-sea');
+
+            // Reset tab styles
+            const normalClass = "px-5 py-2.5 rounded-full text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition";
+            const activeClass = "px-5 py-2.5 rounded-full text-xs font-bold bg-sylon-gold text-slate-950 transition shadow-lg";
+            
+            btnAll.className = normalClass;
+            btnAir.className = normalClass;
+            btnCourier.className = normalClass;
+            btnSea.className = normalClass;
+
+            if (category === 'all') {
+                air.classList.remove('hidden');
+                courier.classList.remove('hidden');
+                sea.classList.remove('hidden');
+                btnAll.className = activeClass;
+            } else if (category === 'air') {
+                air.classList.remove('hidden');
+                courier.classList.add('hidden');
+                sea.classList.add('hidden');
+                btnAir.className = activeClass;
+            } else if (category === 'courier') {
+                air.classList.add('hidden');
+                courier.classList.remove('hidden');
+                sea.classList.add('hidden');
+                btnCourier.className = activeClass;
+            } else if (category === 'sea') {
+                air.classList.add('hidden');
+                courier.classList.add('hidden');
+                sea.classList.remove('hidden');
+                btnSea.className = activeClass;
             }
         }
 
@@ -1360,6 +1717,5 @@
             checkPortOfficeHours();
         };
     </script>
-    <!-- Note: This navigation component corresponds to image_50a026.png. The z-index and clickability have been fully rectified to ensure it remains sticky and fully clickable from all scroll positions. -->
 </body>
 </html>
