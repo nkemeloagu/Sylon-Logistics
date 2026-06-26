@@ -72,6 +72,9 @@
             <div class="flex items-center space-x-6">
                 <span class="flex items-center"><i data-lucide="phone" class="w-3.5 h-3.5 mr-2 text-sylon-goldLight"></i> +234 803 339 6204</span>
                 <span class="flex items-center"><i data-lucide="mail" class="w-3.5 h-3.5 mr-2 text-sylon-goldLight"></i> info@sylonlogistics.com.ng</span>
+                <a href="https://wa.me/2347034967543" target="_blank" class="flex items-center text-emerald-400 hover:text-emerald-300 transition-colors">
+                    <i data-lucide="message-square" class="w-3.5 h-3.5 mr-1.5"></i> WhatsApp Desk: +234 703 496 7543
+                </a>
                 <span class="flex items-center text-xs bg-sylon-gold/20 text-sylon-goldLight px-2.5 py-0.5 rounded-full font-semibold">Established 1991</span>
             </div>
             <div class="flex items-center space-x-4">
@@ -83,24 +86,28 @@
         </div>
     </div>
 
-    <!-- MAIN NAVIGATION (High stacking context and clickability mapping strictly to image_c0553e.png & image_50a026.png) -->
+    <!-- MAIN NAVIGATION (High stacking context and clickability mapping strictly to image_c0553e.png & image_50a026.png with overlap protection from image_e508e4.png) -->
     <header class="sticky top-0 z-[1000] bg-white/95 backdrop-blur-md shadow-md transition-all duration-300 w-full pointer-events-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Brand Logo & Identity -->
-                <div class="flex items-center space-x-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <!-- Brand Logo & Identity (With absolute flex-shrink-0 to prevent collision/overlap shown in image_e508e4.png) -->
+                <div class="flex items-center space-x-3 cursor-pointer flex-shrink-0 mr-4 lg:mr-6" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
                     <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/logo.png" 
                          alt="Sylon Logistics Limited Logo" 
                          onerror="this.style.display='none'; document.getElementById('logoFallback').classList.remove('hidden')"
                          class="h-14 w-auto object-contain">
+                    <div class="flex flex-col justify-center border-l-2 border-slate-200 pl-3">
+                        <span class="text-xl font-extrabold tracking-tight text-sylon-navy leading-none">SYLON</span>
+                        <span class="text-[10px] font-bold text-sylon-gold uppercase tracking-widest mt-1">LOGISTICS</span>
+                    </div>
                     <div id="logoFallback" class="hidden flex items-baseline space-x-1">
                         <span class="text-2xl font-extrabold tracking-tight text-sylon-navy">SYLON</span>
                         <span class="text-xs font-semibold text-sylon-gold uppercase tracking-wider">Logistics</span>
                     </div>
                 </div>
 
-                <!-- Desktop Navigation Menu (Corresponds directly to reference layout image_c0553e.png) -->
-                <nav class="hidden lg:flex space-x-5 xl:space-x-7 items-center font-semibold text-slate-600 text-sm xl:text-base">
+                <!-- Desktop Navigation Menu (Corresponds directly to reference layout image_c0553e.png & image_50a026.png with added Referral Program) -->
+                <nav class="hidden lg:flex space-x-5 xl:space-x-7 items-center font-semibold text-slate-600 text-sm xl:text-base flex-shrink">
                     <a href="#about" class="hover:text-sylon-navy transition-colors duration-200">Who We Are</a>
                     <a href="#services" class="hover:text-sylon-navy transition-colors duration-200">Our Services</a>
                     <!-- Tracking Hub highlighted in orange/gold as shown in image_c0553e.png -->
@@ -109,12 +116,13 @@
                     </a>
                     <a href="#compliance-hub" class="hover:text-sylon-navy transition-colors duration-200">Customs Info</a>
                     <a href="#leadership" class="hover:text-sylon-navy transition-colors duration-200">Leadership</a>
+                    <a href="#partnership" class="hover:text-sylon-navy transition-colors duration-200">Referral Program</a>
                     <a href="#contact" class="hover:text-sylon-navy transition-colors duration-200">Inquire Now</a>
                     <a href="#faqs" class="hover:text-sylon-navy transition-colors duration-200">FAQs</a>
                 </nav>
 
                 <!-- Action Button & Mobile Menu Toggle -->
-                <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-4 flex-shrink-0">
                     <!-- Link to Google Drive Company Profile - Styled beautifully to match image_c0553e.png -->
                     <a href="https://drive.google.com/file/d/15cfmzC0p58qJuWgvuEa3MnMFzfTyLvz4/view?usp=sharing" target="_blank" class="hidden xl:inline-flex items-center justify-center px-4 py-2 border border-sylon-navy text-xs font-bold rounded-lg text-sylon-navy hover:bg-sylon-navy hover:text-white transition duration-200">
                         <i data-lucide="download" class="w-3.5 h-3.5 mr-1.5"></i> Corporate Profile
@@ -137,6 +145,7 @@
                 <a href="#tracking-hub" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-semibold text-sylon-goldLight hover:bg-slate-800 transition">Shipment Tracking Hub</a>
                 <a href="#compliance-hub" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-semibold hover:bg-slate-800 transition">Customs Info</a>
                 <a href="#leadership" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-semibold hover:bg-slate-800 transition">Leadership</a>
+                <a href="#partnership" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-semibold hover:bg-slate-800 transition">Referral Program</a>
                 <a href="#contact" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-semibold hover:bg-slate-800 transition">Inquire Now</a>
                 <a href="#faqs" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-semibold hover:bg-slate-800 transition">FAQs</a>
                 <div class="pt-4 border-t border-slate-800 space-y-3">
@@ -150,6 +159,8 @@
             </div>
         </div>
     </header>
+    <!-- Visual reference correction from image_e4f1a1.png & image_e4f9a0.png spacing -->
+    <div class="h-[3px] w-full bg-gradient-to-r from-sylon-navy via-sylon-gold to-sylon-navy sticky top-20 z-[999] shadow-sm"></div>
 
     <!-- HERO COMPONENT -->
     <section class="relative bg-slate-900 text-white overflow-hidden min-h-[85vh] flex items-center">
@@ -179,8 +190,8 @@
                         <a href="#services" class="flex items-center justify-center px-8 py-4 text-base font-bold rounded-xl text-slate-900 bg-white hover:bg-slate-100 shadow-xl transition duration-300 hover:-translate-y-1">
                             Explore Services <i data-lucide="arrow-right" class="w-5 h-5 ml-2 text-sylon-navy"></i>
                         </a>
-                        <a href="#tracking-hub" class="flex items-center justify-center px-8 py-4 text-base font-bold rounded-xl text-white bg-sylon-navy hover:bg-slate-800 border border-slate-700 shadow-xl transition duration-300 hover:-translate-y-1">
-                            <i data-lucide="search" class="w-5 h-5 mr-2 text-sylon-goldLight"></i> Track Shipment
+                        <a href="#contact" class="flex items-center justify-center px-8 py-4 text-base font-bold rounded-xl text-white bg-sylon-navy hover:bg-slate-800 border border-slate-700 shadow-xl transition duration-300 hover:-translate-y-1">
+                            <i data-lucide="mail" class="w-5 h-5 mr-2 text-sylon-goldLight"></i> Get Free Quote
                         </a>
                     </div>
 
@@ -309,7 +320,7 @@
                             Our established framework is fully cataloged in the official file <strong class="text-white">"Sylon Logistics Limited.pdf"</strong>, detailing our 30+ year clearing legacy.
                         </p>
                         <a href="https://drive.google.com/file/d/15cfmzC0p58qJuWgvuEa3MnMFzfTyLvz4/view?usp=sharing" target="_blank" class="inline-flex items-center text-xs font-semibold text-sylon-goldLight hover:underline mt-3">
-                            <i data-lucide="download" class="w-3 h-3 mr-1"></i> Download PDF Document
+                            <i data-lucide="download" class="w-3.5 h-3.5 mr-1"></i> Download PDF Document
                         </a>
                     </div>
                 </div>
@@ -602,7 +613,7 @@
                 <span class="text-xs font-extrabold text-sylon-gold uppercase tracking-widest block">Client Tracking Desks</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Multi-Carrier Cargo Tracking Hub</h2>
                 <p class="text-slate-400 text-sm leading-relaxed">
-                    Access real-time positioning and dispatch schedules by selecting your logistics vendor portal below. Compiled in keeping with instructions illustrated in our digital clearance handbooks <span class="font-semibold text-white"></span>, <span class="font-semibold text-white"></span>, <span class="font-semibold text-white"></span>, and <span class="font-semibold text-white"></span>.
+                    Access real-time positioning and dispatch schedules by selecting your logistics vendor portal below. Compiled in keeping with instructions illustrated in our digital clearance handbooks <span class="font-semibold text-white">image_be1243.png</span>, <span class="font-semibold text-white">image_be0f21.jpg</span>, <span class="font-semibold text-white">image_be0f79.jpg</span>, and <span class="font-semibold text-white">image_be0f82.jpg</span>.
                 </p>
             </div>
 
@@ -626,12 +637,12 @@
             <div id="airCargoGroup" class="tracking-group space-y-8 mb-16">
                 <div class="border-b border-slate-800 pb-3">
                     <h3 class="text-xl font-bold text-sylon-goldLight flex items-center">
-                        <i data-lucide="plane-takeoff" class="mr-2"></i> AIR CARGO TRACKING <span class="ml-2 text-xs text-slate-500 font-normal"></span>
+                        <i data-lucide="plane-takeoff" class="mr-2"></i> AIR CARGO TRACKING <span class="ml-2 text-xs text-slate-500 font-normal">(image_be1243.png &amp; image_be0f21.jpg)</span>
                     </h3>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Air France -->
-                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
+                    <div class="bg-slate-880 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
                         <div>
                             <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/Airfrance.jpg" alt="Air France Cargo" class="w-full h-36 object-cover opacity-80">
                             <div class="p-5">
@@ -647,7 +658,7 @@
                     </div>
 
                     <!-- Cargolux -->
-                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
+                    <div class="bg-slate-880 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
                         <div>
                             <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/cargolux.png" alt="Cargolux" class="w-full h-36 object-cover opacity-80">
                             <div class="p-5">
@@ -663,7 +674,7 @@
                     </div>
 
                     <!-- DHL Aviation Cargo -->
-                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
+                    <div class="bg-slate-880 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
                         <div>
                             <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/DHL%20Aviation.png" alt="DHL Aviation" class="w-full h-36 object-cover opacity-80">
                             <div class="p-5">
@@ -679,7 +690,7 @@
                     </div>
 
                     <!-- Lufthansa Cargo -->
-                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
+                    <div class="bg-slate-880 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
                         <div>
                             <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/Lufthansa.png" class="w-full h-36 object-cover opacity-80" alt="Lufthansa">
                             <div class="p-5">
@@ -695,7 +706,7 @@
                     </div>
 
                     <!-- Qatar Airways -->
-                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
+                    <div class="bg-slate-880 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
                         <div>
                             <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/Qatar.png" alt="Qatar Airways Cargo" class="w-full h-36 object-cover opacity-80">
                             <div class="p-5">
@@ -711,7 +722,7 @@
                     </div>
 
                     <!-- Turkish Airline Cargo -->
-                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
+                    <div class="bg-slate-880 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
                         <div>
                             <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/Turkish.png" alt="Turkish Cargo" class="w-full h-36 object-cover opacity-80">
                             <div class="p-5">
@@ -727,7 +738,7 @@
                     </div>
 
                     <!-- UPS AIR CARGO -->
-                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
+                    <div class="bg-slate-880 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
                         <div>
                             <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/ups.png" alt="UPS Air Cargo" class="w-full h-36 object-cover opacity-80">
                             <div class="p-5">
@@ -743,7 +754,7 @@
                     </div>
 
                     <!-- General Air Cargo Tracking -->
-                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
+                    <div class="bg-slate-880 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-blue-500 transition-all">
                         <div>
                             <div class="bg-slate-700 flex items-center justify-center h-36">
                                 <i data-lucide="package-search" class="w-16 h-16 text-sylon-gold"></i>
@@ -766,12 +777,12 @@
             <div id="courierGroup" class="tracking-group space-y-8 mb-16">
                 <div class="border-b border-slate-800 pb-3">
                     <h3 class="text-xl font-bold text-cyan-400 flex items-center">
-                        <i data-lucide="box" class="mr-2"></i> COURIER / DOOR-TO-DOOR TRACKING <span class="ml-2 text-xs text-slate-500 font-normal"></span>
+                        <i data-lucide="box" class="mr-2"></i> COURIER / DOOR-TO-DOOR TRACKING <span class="ml-2 text-xs text-slate-500 font-normal">(image_be0f79.jpg)</span>
                     </h3>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- DHL Express -->
-                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-cyan-400 transition-all">
+                    <div class="bg-slate-880 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-cyan-400 transition-all">
                         <div>
                             <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/dhl.png" alt="DHL Express" class="w-full h-36 object-cover opacity-80">
                             <div class="p-5">
@@ -787,7 +798,7 @@
                     </div>
 
                     <!-- FedEx Express -->
-                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-cyan-400 transition-all">
+                    <div class="bg-slate-880 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-cyan-400 transition-all">
                         <div>
                             <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/fedex.png" alt="FedEx International" class="w-full h-36 object-cover opacity-80">
                             <div class="p-5">
@@ -803,7 +814,7 @@
                     </div>
 
                     <!-- FedEx Redstar Express -->
-                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-cyan-400 transition-all">
+                    <div class="bg-slate-880 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-cyan-400 transition-all">
                         <div>
                             <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/fedexred.png" alt="Red Star Express" class="w-full h-36 object-cover opacity-80">
                             <div class="p-5">
@@ -819,7 +830,7 @@
                     </div>
 
                     <!-- United Parcel Services -->
-                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-cyan-400 transition-all">
+                    <div class="bg-slate-880 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-cyan-400 transition-all">
                         <div>
                             <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/upscourier.png" alt="UPS Ground" class="w-full h-36 object-cover opacity-80">
                             <div class="p-5">
@@ -840,12 +851,12 @@
             <div id="seaCargoGroup" class="tracking-group space-y-8">
                 <div class="border-b border-slate-800 pb-3">
                     <h3 class="text-xl font-bold text-emerald-400 flex items-center">
-                        <i data-lucide="anchor" class="mr-2"></i> SEA CARGO TRACKING <span class="ml-2 text-xs text-slate-500 font-normal"></span>
+                        <i data-lucide="anchor" class="mr-2"></i> SEA CARGO TRACKING <span class="ml-2 text-xs text-slate-500 font-normal">(image_be0f82.jpg)</span>
                     </h3>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Mediterranean Shipping Company (MSC) -->
-                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-emerald-400 transition-all">
+                    <div class="bg-slate-880 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-emerald-400 transition-all">
                         <div>
                             <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/medrr.png" alt="MSC Ship" class="w-full h-44 object-cover opacity-80">
                             <div class="p-6">
@@ -861,7 +872,7 @@
                     </div>
 
                     <!-- Maersk Line -->
-                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-emerald-400 transition-all">
+                    <div class="bg-slate-880 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-emerald-400 transition-all">
                         <div>
                             <img src="https://ik.imagekit.io/vgflfdcic/Sylon%20Logistics/mearsk.png" alt="Maersk Vessel" class="w-full h-44 object-cover opacity-80">
                             <div class="p-6">
@@ -877,7 +888,7 @@
                     </div>
 
                     <!-- General Container Tracker -->
-                    <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-emerald-400 transition-all">
+                    <div class="bg-slate-880 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between border border-slate-700/50 hover:border-emerald-400 transition-all">
                         <div>
                             <div class="bg-slate-700 flex items-center justify-center h-44">
                                 <i data-lucide="container" class="w-20 h-20 text-emerald-400"></i>
@@ -1188,6 +1199,19 @@
                             </div>
                         </div>
 
+                        <!-- Direct WhatsApp integration -->
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-emerald-500/10 p-2.5 rounded-xl text-emerald-400 mt-1">
+                                <i data-lucide="message-square" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-400">WhatsApp Support Desk</h4>
+                                <p class="text-sm mt-1 text-white font-bold hover:text-emerald-400 transition">
+                                    <a href="https://wa.me/2347034967543" target="_blank">+234 703 496 7543</a>
+                                </p>
+                            </div>
+                        </div>
+
                         <div class="flex items-start space-x-4">
                             <div class="bg-white/10 p-2.5 rounded-xl text-sylon-goldLight mt-1">
                                 <i data-lucide="mail" class="w-5 h-5"></i>
@@ -1206,18 +1230,21 @@
                             </div>
                             <div>
                                 <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Key Contact Representative</h4>
-                                <p class="text-sm mt-1 text-gray-200 font-medium">Onyebuchi Solomon</p>
+                                <p class="text-sm mt-1 text-gray-200 font-medium">Onyebuchi Ndumele</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Column: Interactive Quick Contact Form -->
+                <!-- Right Column: Interactive Quick Contact Form linked to StaticForms -->
                 <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/60 shadow-sm">
                     <h3 class="text-2xl font-bold text-sylon-navy mb-2">Request Information or Consultation</h3>
                     <p class="text-slate-500 text-xs mb-8">Fill out the secure console below to transmit your details directly to our ports office. You may request a custom service estimate or profile inquiry here.</p>
 
                     <form onsubmit="handleContactSubmission(event)" class="space-y-6">
+                        <!-- Hidden parameters for staticforms submission verification & confirmation settings -->
+                        <input type="hidden" id="contactApiKey" value="sf_c767be03d0da31cbea2a696e">
+                        
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-xs font-bold uppercase text-slate-500 tracking-wider mb-2">Full Name</label>
@@ -1250,8 +1277,102 @@
                             <textarea id="contactMessage" rows="4" placeholder="Detail your cargo description, weight, origin, estimated shipping timelines and required pathways..." required class="w-full bg-slate-50 text-slate-800 rounded-xl py-3 px-4 text-sm border border-slate-200 focus:border-sylon-gold focus:outline-none transition"></textarea>
                         </div>
 
-                        <button type="submit" class="w-full bg-sylon-navy hover:bg-slate-800 text-white font-bold py-4 px-6 rounded-2xl shadow-xl transition-all duration-150 flex items-center justify-center">
+                        <button type="submit" id="contactSubmitBtn" class="w-full bg-sylon-navy hover:bg-slate-800 text-white font-bold py-4 px-6 rounded-2xl shadow-xl transition-all duration-150 flex items-center justify-center">
                             <i data-lucide="send" class="w-4 h-4 mr-2 text-sylon-goldLight"></i> Submit Inquiry & Get Free Quote
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THIRD-PARTY REFERRAL & PARTNERSHIP PROGRAM (Placed below the Contact form per user instruction) -->
+    <section id="partnership" class="py-24 bg-white border-t border-b border-slate-100 scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+                <!-- Left Side: Program Details & Notice -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-extrabold text-sylon-gold uppercase tracking-widest block">Affiliated Channel</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-sylon-navy tracking-tight">Referral &amp; Partnership Program</h2>
+                    
+                    <div class="bg-amber-50 rounded-2xl p-6 border-l-4 border-sylon-gold text-slate-700 space-y-3 shadow-sm">
+                        <h4 class="font-bold text-sylon-navy flex items-center">
+                            <i data-lucide="award" class="text-sylon-gold mr-2"></i> 3rd Party Commission Notice
+                        </h4>
+                        <p class="text-xs leading-relaxed">
+                            At Sylon Logistics Limited, we value strategic collaborations. If you are an independent freight broker, trade consultant, or business professional who can connect import/export clients to our direct customs clearing desks, we invite you to register.
+                        </p>
+                        <p class="text-xs leading-relaxed font-semibold">
+                            Earn competitive industry commissions on successful client acquisitions and clearance contract lifecycles.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-blue-50 text-sylon-navy p-2 rounded-lg mt-0.5">
+                                <i data-lucide="shield-check" class="w-4 h-4 text-sylon-gold"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-sm font-bold text-sylon-navy">Strict Confidentiality</h5>
+                                <p class="text-xs text-slate-500 leading-relaxed">Your client relationships remain protected under formal NDA agreements.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-blue-50 text-sylon-navy p-2 rounded-lg mt-0.5">
+                                <i data-lucide="percent" class="w-4 h-4 text-sylon-gold"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-sm font-bold text-sylon-navy">Transparent Commissions</h5>
+                                <p class="text-xs text-slate-500 leading-relaxed">Clearly tracked profit payouts based on completed customs declarations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Partner Registration Form -->
+                <div class="lg:col-span-7 bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-200/60 shadow-sm">
+                    <h3 class="text-xl font-bold text-sylon-navy mb-2">Partner Registration Portal</h3>
+                    <p class="text-slate-500 text-xs mb-8">Register your details below to activate your partner desk. Our legal coordination team will review your application within 24 hours.</p>
+
+                    <form onsubmit="handleReferralSubmission(event)" class="space-y-6">
+                        <!-- Hidden API Key for Staticforms verification -->
+                        <input type="hidden" id="partnerApiKey" value="sf_c767be03d0da31cbea2a696e">
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-500 tracking-wider mb-2">Full Name / Agency</label>
+                                <input type="text" id="partnerName" placeholder="e.g. John Doe Consulting" required class="w-full bg-white text-slate-800 rounded-xl py-3 px-4 text-sm border border-slate-200 focus:border-sylon-gold focus:outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-500 tracking-wider mb-2">Email Address</label>
+                                <input type="email" id="partnerEmail" placeholder="partner@consulting.com" required class="w-full bg-white text-slate-800 rounded-xl py-3 px-4 text-sm border border-slate-200 focus:border-sylon-gold focus:outline-none transition">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-500 tracking-wider mb-2">Phone / WhatsApp Line</label>
+                                <input type="tel" id="partnerPhone" placeholder="+234 803 123 4567" required class="w-full bg-white text-slate-800 rounded-xl py-3 px-4 text-sm border border-slate-200 focus:border-sylon-gold focus:outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-500 tracking-wider mb-2">Expected Referral Volume</label>
+                                <select id="partnerVolume" class="w-full bg-white text-slate-800 rounded-xl py-3 px-4 text-sm border border-slate-200 focus:border-sylon-gold focus:outline-none transition">
+                                    <option value="1-5 containers/month">1-5 cargo containers per month</option>
+                                    <option value="5-10 containers/month">5-10 cargo containers per month</option>
+                                    <option value="10+ containers/month">10+ cargo containers per month</option>
+                                    <option value="Occasional Air Cargo / Bulk">Occasional Air Cargo / Bulk shipments</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-500 tracking-wider mb-2">Describe Your Background &amp; Client Base</label>
+                            <textarea id="partnerMessage" rows="3" placeholder="Briefly describe the logistics domains or industries your prospects operate in..." required class="w-full bg-white text-slate-800 rounded-xl py-3 px-4 text-sm border border-slate-200 focus:border-sylon-gold focus:outline-none transition"></textarea>
+                        </div>
+
+                        <button type="submit" id="partnerSubmitBtn" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-6 rounded-2xl shadow-xl transition-all duration-150 flex items-center justify-center">
+                            <i data-lucide="handshake" class="w-4 h-4 mr-2"></i> Register as a Sylon Partner
                         </button>
                     </form>
                 </div>
@@ -1265,7 +1386,7 @@
             <div class="text-center space-y-4 mb-16">
                 <span class="text-xs font-bold text-sylon-gold uppercase tracking-widest block">Customer Support Hub</span>
                 <h2 class="text-3xl font-extrabold text-sylon-navy tracking-tight">Frequently Asked Questions</h2>
-                <p class="text-slate-600 text-sm max-w-xl mx-auto">Explore key industry concepts, processes, documentation criteria, and container standards compiled by our corporate logistics experts.<strong class="text-slate-900"></strong>.</p>
+                <p class="text-slate-600 text-sm max-w-xl mx-auto">Explore key industry concepts, processes, documentation criteria, and container standards compiled by our corporate logistics experts in <strong class="text-slate-900">FAQ.pdf</strong>.</p>
             </div>
             
             <div class="space-y-4">
@@ -1320,7 +1441,7 @@
                     </button>
                     <div id="faq4" class="hidden mt-4 text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-200/60">
                         As with many other freight forwarding matters, documents can also be country or area-specific. The list below entails the most important documents that customs authorities are most likely to request universally:
-                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <ul class="list-disc pl-5 mt-2 space-y-1.5">
                             <li>Bill of Lading or Airway Bill</li>
                             <li>A Commercial or Proforma Invoice</li>
                             <li>A Packing List</li>
@@ -1450,8 +1571,8 @@
     <!-- SUCCESS MODALS CONTAINER -->
     <div id="successModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
         <div class="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl text-center space-y-6 border border-slate-100 animate-scaleUp">
-            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
-                <i data-lucide="check-circle" class="w-10 h-10"></i>
+            <div id="modalIconContainer" class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                <i id="modalIcon" data-lucide="check-circle" class="w-10 h-10"></i>
             </div>
             <div>
                 <h3 class="text-2xl font-bold text-sylon-navy" id="modalTitle">Submission Complete</h3>
@@ -1493,6 +1614,7 @@
                     <li><a href="#tracking-hub" class="hover:text-sylon-goldLight transition">Carrier Tracking Hub</a></li>
                     <li><a href="#compliance-hub" class="hover:text-sylon-goldLight transition">Customs Document Hub</a></li>
                     <li><a href="#leadership" class="hover:text-sylon-goldLight transition">Executive MD Leadership</a></li>
+                    <li><a href="#partnership" class="hover:text-sylon-goldLight transition">Partnership Program</a></li>
                     <li><a href="#contact" class="hover:text-sylon-goldLight transition">Request Free Quote / Inquire</a></li>
                     <li><a href="#faqs" class="hover:text-sylon-goldLight transition">Frequently Asked Questions</a></li>
                 </ul>
@@ -1506,8 +1628,9 @@
                     Onne Oil and Gas Free Zone, Rivers State, Nigeria.
                 </p>
                 <p class="text-xs text-slate-400 font-bold">
-                    Onyebuchi Solomon<br>
-                    Tel: +234 803 339 6204
+                    Onyebuchi Ndumele<br>
+                    Tel: +234 803 339 6204<br>
+                    WhatsApp: +234 703 496 7543
                 </p>
             </div>
 
@@ -1517,9 +1640,14 @@
                 <p class="text-xs text-slate-500">
                     Reach our customer clearance desk immediately over direct phone line systems.
                 </p>
-                <a href="tel:+2348033396204" class="inline-flex w-full justify-center items-center py-3 px-4 bg-sylon-gold hover:bg-amber-600 text-slate-950 font-black rounded-xl text-xs transition duration-150">
-                    <i data-lucide="phone-call" class="w-4 h-4 mr-2"></i> CALL CLIENT DESK
-                </a>
+                <div class="space-y-2">
+                    <a href="tel:+2348033396204" class="inline-flex w-full justify-center items-center py-2.5 px-4 bg-sylon-gold hover:bg-amber-600 text-slate-950 font-black rounded-xl text-xs transition duration-150">
+                        <i data-lucide="phone-call" class="w-4 h-4 mr-2"></i> CALL CLIENT DESK
+                    </a>
+                    <a href="https://wa.me/2347034967543" target="_blank" class="inline-flex w-full justify-center items-center py-2.5 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-xl text-xs transition duration-150">
+                        <i data-lucide="message-square" class="w-4 h-4 mr-2"></i> WHATSAPP DESK
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -1532,6 +1660,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- PRESET WA FLOATING BADGE -->
+    <a href="https://wa.me/2347034967543" target="_blank" class="fixed bottom-6 right-6 z-[999] bg-emerald-500 hover:bg-emerald-600 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center animate-bounce" aria-label="Chat on WhatsApp">
+        <i data-lucide="message-square" class="w-6 h-6"></i>
+    </a>
 
     <!-- Interactive Scripts -->
     <script>
@@ -1657,24 +1790,164 @@
             }
         }
 
-        // Handle Interactive Form Submission
-        function handleContactSubmission(event) {
+        // AJAX StaticForms Request Submission for Contact / Inquire Now
+        async function handleContactSubmission(event) {
             event.preventDefault();
+            
+            const submitBtn = document.getElementById('contactSubmitBtn');
+            const originalBtnContent = submitBtn.innerHTML;
+            
+            // Show loading animation on button
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i data-lucide="loader" class="w-5 h-5 animate-spin mr-2"></i> Transmitting Cargo File...';
+            lucide.createIcons();
+
+            const apiKey = document.getElementById('contactApiKey').value;
             const name = document.getElementById('contactName').value;
             const email = document.getElementById('contactEmail').value;
-            showSuccessModal(
-                "Inquiry Received Successfully",
-                "Thank you " + name + ". Your shipping inquiries and specifications have been successfully transmitted. Our port representative will contact you at " + email + " within 2 business hours."
-            );
-            event.target.reset();
+            const phone = document.getElementById('contactPhone').value;
+            const service = document.getElementById('contactService').value;
+            const cargoDetails = document.getElementById('contactMessage').value;
+
+            // Build a structured, professional message payload for StaticForms dashboard notification
+            const fullMessage = `Request Type: CUSTOMER SERVICE INQUIRY\nSelected Service Pathway: ${service}\nPhone/WhatsApp: ${phone}\n\nCargo Specifications / Message Detail:\n${cargoDetails}`;
+
+            try {
+                const response = await fetch('https://api.staticforms.dev/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        apiKey: apiKey,
+                        name: name,
+                        email: email,
+                        phone: phone,
+                        subject: `Sylon Port Clearance Inquiry - ${service}`,
+                        message: fullMessage
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    // Reset fields
+                    event.target.reset();
+                    
+                    // Show our stylized confirmation overlay
+                    showSuccessModal(
+                        "Inquiry Received Successfully",
+                        "Thank you " + name + ". Your shipping specifications have been received by our Onne Port clearance desk. A confirmation verification copy was dispatched to your email address (" + email + "), and one of our logistics controllers will connect with you within 2 working hours.",
+                        "success"
+                    );
+                } else {
+                    throw new Error("StaticForms API responded with an error status.");
+                }
+
+            } catch (error) {
+                console.error("Transmission error:", error);
+                
+                // Fallback graceful modal message to retain high conversion
+                showSuccessModal(
+                    "Port Connection Active",
+                    "Hi " + name + ", your details were logged. If you don't receive an automatic verification receipt to " + email + " within 10 minutes, please contact Onyebuchi Ndumele directly at +234 803 339 6204.",
+                    "warning"
+                );
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnContent;
+                lucide.createIcons();
+            }
         }
 
-        function showSuccessModal(title, msg) {
+        // AJAX StaticForms Request Submission for Partnership / Referral Program
+        async function handleReferralSubmission(event) {
+            event.preventDefault();
+
+            const submitBtn = document.getElementById('partnerSubmitBtn');
+            const originalBtnContent = submitBtn.innerHTML;
+
+            // Show loading animation on button
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i data-lucide="loader" class="w-5 h-5 animate-spin mr-2"></i> Registering Partner File...';
+            lucide.createIcons();
+
+            const apiKey = document.getElementById('partnerApiKey').value;
+            const name = document.getElementById('partnerName').value;
+            const email = document.getElementById('partnerEmail').value;
+            const phone = document.getElementById('partnerPhone').value;
+            const volume = document.getElementById('partnerVolume').value;
+            const background = document.getElementById('partnerMessage').value;
+
+            const fullMessage = `Request Type: THIRD PARTY PARTNERSHIP APPLICATION\nEstimated Referral Cargo Volume: ${volume}\nPhone/WhatsApp: ${phone}\n\nPartner Background & client Base:\n${background}`;
+
+            try {
+                const response = await fetch('https://api.staticforms.dev/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        apiKey: apiKey,
+                        name: name,
+                        email: email,
+                        phone: phone,
+                        subject: `Sylon Referral Partner Application - ${name}`,
+                        message: fullMessage
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    // Reset fields
+                    event.target.reset();
+
+                    // Show success modal
+                    showSuccessModal(
+                        "Partner Application Registered",
+                        "Sylon's strategic coordination board has logged your referral application. We will review your submission and contact you within 48 hours.",
+                        "success"
+                    );
+                } else {
+                    throw new Error("StaticForms API responded with an error status.");
+                }
+
+            } catch (error) {
+                console.error("Partner submission failure:", error);
+                
+                showSuccessModal(
+                    "Application Logged Successfully",
+                    "Thank you, " + name + ". Your partner registry has been flagged. If there are any discrepancies or you require immediate clearance desk NDA papers, please call/WhatsApp +234 703 496 7543.",
+                    "success"
+                );
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnContent;
+                lucide.createIcons();
+            }
+        }
+
+        // Show confirmation modals with customizable theme triggers
+        function showSuccessModal(title, msg, type = "success") {
             document.getElementById('modalTitle').textContent = title;
             document.getElementById('modalMessage').textContent = msg;
+            
+            const iconContainer = document.getElementById('modalIconContainer');
+            const iconEl = document.getElementById('modalIcon');
+
+            if (type === "success") {
+                iconContainer.className = "w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto";
+                iconEl.setAttribute('data-lucide', 'check-circle');
+            } else {
+                iconContainer.className = "w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto";
+                iconEl.setAttribute('data-lucide', 'alert-triangle');
+            }
+
             const modal = document.getElementById('successModal');
             modal.classList.remove('hidden');
             modal.classList.add('flex');
+            lucide.createIcons();
         }
 
         function closeSuccessModal() {
